@@ -10,10 +10,13 @@ Clone this repo and run
 
 ```
 cd app
+npm install
 npm start
 ```
 
 To run storybook just type
+
 ```
+getstorybook
 npm run storybook 
 ```
