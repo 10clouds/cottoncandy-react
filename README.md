@@ -14,9 +14,15 @@ npm install
 npm start
 ```
 
-To run storybook just type
+To install storybook type
 
 ```
+npm i -g @storybook/cli
+cd my-react-app
 getstorybook
+```
+
+To run storybook:
+```
 npm run storybook 
 ```
