@@ -7,8 +7,9 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5",
-    "@storybook/react": "^3.0.0"
+    "@storybook/react": "^3.0.0",
+    "prop-types": "^15.5.10",
+    "react-scripts": "0.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
