@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const buttonStyles = {
+const inputStyles = {
   border: '1px solid #eee',
   borderRadius: 3,
   backgroundColor: '#FFFFFF',
@@ -10,9 +10,7 @@ const buttonStyles = {
 };
 
 export const Input = ({ children, onClick }) => (
-  <input style={buttonStyles} />
+  <input style={inputStyles} />
 );
-
-
 
 export default Input;

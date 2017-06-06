@@ -1,7 +1,32 @@
 {
-  "name": "app",
+  "name": "cottoncandy-react",
+  "author": "10Clouds <contact@10clouds.com>",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "files": [
+    "src/lib"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/10clouds/cottoncandy-react.git"
+  },
+  "homepage": "https://github.com/10clouds/cottoncandy-react",
+  "bugs": {
+    "url": "https://github.com/10clouds/cottoncandy-react/issues"
+  },
+  "keywords": [
+    "terminal",
+    "utility"
+  ],
+  "license": "MIT",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
@@ -10,13 +35,5 @@
     "@storybook/react": "^3.0.0",
     "prop-types": "^15.5.10",
     "react-scripts": "0.9.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
   }
 }
