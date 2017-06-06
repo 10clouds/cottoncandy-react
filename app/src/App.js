@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button } from './lib/Button';
 import { Input } from './lib/Input';
+import { Radio } from './lib/Radio';
 
 class App extends Component {
   render() {
@@ -15,6 +16,8 @@ class App extends Component {
         <Button children="Test"/>
         <h2>Inputs</h2>
         <Input />
+        <h2>Radio</h2>
+        <Radio />
       </div>
     );
   }
