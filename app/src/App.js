@@ -15,7 +15,14 @@ class App extends Component {
         <h2>Inputs</h2>
         <Input />
         <h2>Radio</h2>
-        <Radio />
+        <p>
+          <Radio type="radio" id="ice-cream" name="radio-group" defaultChecked />
+          <label htmlFor="ice-cream">Ice cream</label>
+        </p>
+        <p>
+          <Radio type="radio" id="cotton-candy" name="radio-group" />
+          <label htmlFor="cotton-candy">Cotton candy</label>
+        </p>
       </div>
     );
   }
