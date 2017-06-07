@@ -1,16 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-const inputStyles = {
-  border: '1px solid #eee',
-  borderRadius: 3,
-  backgroundColor: '#FFFFFF',
-  fontSize: 15,
-  margin: 10,
-};
-
-export const Input = ({ children, onClick }) => (
-  <input style={inputStyles} />
-);
-
-export default Input;
+export const Input = styled.input`
+  border: 1px solid #ccd5f8;
+  border-radius: 2px;
+  background: white;
+  font-size: 16;
+  padding: 10px 5px;
+`;
