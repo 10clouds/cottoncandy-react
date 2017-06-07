@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
+import * as palette from './palette';
+
 export const Radio = styled.input`
   &:checked,
   &:not(:checked) {
@@ -10,32 +12,33 @@ export const Radio = styled.input`
 
      + label {
     	position: relative;
-	    padding-left: 28px;
+	    padding-left: 46px;
 	    cursor: pointer;
-	    line-height: 20px;
+	    font-size: 14px;
+	    line-height: 34px;
 	    display: inline-block;
-	    color: #666;
+	    color: ${palette.MAIN_TXT_COLOR};
 
 	    &:before {
 	    	content: '';
 		    position: absolute;
 		    left: 0;
 		    top: 0;
-		    width: 18px;
-		    height: 18px;
-		    border: 1px solid #ddd;
+		    width: 30px;
+		    height: 30px;
+		    border: ${palette.INPUT_BORDER};
 		    border-radius: 100%;
-		    background: #fff;
+		    background: white;
 	    }
 
 	    &:after {
 	    	content: '';
-		    width: 12px;
-		    height: 12px;
-		    background: #F87DA9;
+		    width: 16px;
+		    height: 16px;
+		    background: ${palette.GRADIENT_BG};
 		    position: absolute;
-		    top: 4px;
-		    left: 4px;
+		    top: 8px;
+		    left: 8px;
 		    border-radius: 100%;
 		    transition: all 0.2s ease;
 	    }
