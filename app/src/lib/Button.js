@@ -1,25 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-const buttonStyles = {
-  border: '1px solid #eee',
-  borderRadius: 3,
-  backgroundColor: 'green',
-  cursor: 'pointer',
-  fontSize: 15,
-  padding: '3px 10px',
-  margin: 10,
-};
+import * as palette from './palette';
 
-export const Button = ({ children, onClick }) => (
-  <button style={buttonStyles} onClick={onClick}>
-    {children}
-  </button>
-);
-
-Button.propTypes = {
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};
-
-export default Button;
+export const Button = styled.button`
+  border: ${palette.BUTTON_BORDER};
+  border-radius: 35px;
+  background: ${props => props.primary ? palette.BUTTON_BG : 'white'};
+  color: ${props => props.primary ? 'white' : palette.BUTTON_TXT_COLOR};
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+`;
