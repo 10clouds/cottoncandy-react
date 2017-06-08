@@ -35,6 +35,6 @@ export const RadioLabel = styled.label`
 	    left: 8px;
 	    border-radius: 100%;
 	    transition: all 0.2s ease;
-    } 
+    }
   }
 `;

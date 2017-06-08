@@ -11,7 +11,7 @@ export const RadioInput = styled.input`
     left: -9999px;
   }
 
-  &:not(:checked) { 
+  &:not(:checked) {
   	+ label {
   		&:after {
   			opacity: 0;
@@ -20,7 +20,7 @@ export const RadioInput = styled.input`
   	}
   }
 
-  &:checked { 
+  &:checked {
   	+ label {
   		&:after {
   			opacity: 1;
