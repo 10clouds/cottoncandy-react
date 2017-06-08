@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import * as palette from './palette';
 
-export const RadioInput = styled.input`
+export const CheckboxInput = styled.input`
   &:checked,
   &:not(:checked) {
     position: relative;
@@ -21,20 +21,24 @@ export const RadioInput = styled.input`
       height: 30px;
       border: ${props => props.shadow ? 'none' : palette.INPUT_BORDER};
       box-shadow: ${props => props.shadow ? palette.SHADOW : 'none'};
-      border-radius: 100%;
+      border-radius: 2px;
       background: white;
       visibility: visible;
     }
 
     &:after {
-      content: '';
-      width: 16px;
-      height: 16px;
-      background: ${palette.GRADIENT_BG};
+      content: '✓';
+      font-size: 20px;
+      text-align: center;
+      line-height: 31px;
+      width: 32px;
+      height: 32px;
+      color: ${props => props.shadow ? palette.PURPLE : 'white'};
+      background: ${props => props.shadow ? 'white' : palette.GRADIENT_BG};
       position: absolute;
-      top: ${props => props.shadow ? '-13px' : '-12px'};
-      left: ${props => props.shadow ? '7px' : '8px'};
-      border-radius: 100%;
+      top: -20px;
+      left: 0;
+      border-radius: 2px;
       transition: all 0.2s ease;
       visibility: visible;
     }
@@ -44,7 +48,6 @@ export const RadioInput = styled.input`
 
   		&:after {
   			opacity: 0;
-    		transform: scale(0);
   		}
 
   }
@@ -53,7 +56,6 @@ export const RadioInput = styled.input`
 
   		&:after {
   			opacity: 1;
-    		transform: scale(1);
   		}
 
   }
