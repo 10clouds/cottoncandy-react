@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button } from './lib/Button';
 import { Input } from './lib/Input';
+import { RadioInput } from './lib/RadioInput';
+import { RadioLabel } from './lib/RadioLabel';
 
 class App extends Component {
   render() {
@@ -13,6 +15,15 @@ class App extends Component {
         <Button primary>Primary button</Button>
         <h2>Inputs</h2>
         <Input />
+        <h2>Radio</h2>
+        <p>
+          <RadioInput type="radio" id="ice-cream" name="radio-group" defaultChecked />
+          <RadioLabel htmlFor="ice-cream">Ice cream</RadioLabel>
+        </p>
+        <p>
+          <RadioInput type="radio" id="cotton-candy" name="radio-group" />
+          <RadioLabel htmlFor="cotton-candy">Cotton candy</RadioLabel>
+        </p>
       </div>
     );
   }
