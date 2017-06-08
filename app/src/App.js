@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Title, Subtitle } from './lib/Title';
 import { Button } from './lib/Button';
 import { Input } from './lib/Input';
 import { RadioInput } from './lib/RadioInput';
@@ -9,13 +10,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Cottoncandy UI kit</h1>
-        <h2>Buttons</h2>
+        <Title>Cottoncandy UI kit</Title>
+        <Subtitle>Buttons</Subtitle>
         <Button>Default button</Button>
         <Button primary>Primary button</Button>
-        <h2>Inputs</h2>
+        <Subtitle>Inputs</Subtitle>
         <Input />
-        <h2>Radio</h2>
+        <Subtitle>Radio</Subtitle>
         <p>
           <RadioInput type="radio" id="ice-cream" name="radio-group" defaultChecked />
           <RadioLabel htmlFor="ice-cream">Ice cream</RadioLabel>
