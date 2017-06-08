@@ -1,5 +1,6 @@
 /* GLOBAL COLORS */
 export const PURPLE = '#597ce4';
+export const GRAY_LIGHT = '#ebeef4';
 
 export const MAIN_TXT_COLOR = '#39393b';
 export const GRADIENT_BG = 'linear-gradient(to bottom, #6f8aee, #4862e1)';
