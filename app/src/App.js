@@ -6,6 +6,8 @@ import { Input } from './lib/Input';
 import { CheckboxInput } from './lib/CheckboxInput';
 import { RadioInput } from './lib/RadioInput';
 import { InlineLabel } from './lib/InlineLabel';
+import { Spinner } from './lib/Spinner';
+import { ProgressBar } from './lib/ProgressBar';
 
 class App extends Component {
   render() {
@@ -52,6 +54,13 @@ class App extends Component {
           <CheckboxInput shadow type="checkbox" id="blueberry-muffin" />
           <InlineLabel htmlFor="blueberry-muffin">Blueberry muffin</InlineLabel>
         </p>
+
+        <Subtitle>Spinners</Subtitle>
+        <Spinner light />
+        <Spinner small />
+
+        <Subtitle>Progress bars</Subtitle>
+        <ProgressBar />
       </div>
     );
   }
