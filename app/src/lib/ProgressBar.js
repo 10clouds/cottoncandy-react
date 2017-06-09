@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import * as palette from './palette';
 
 export const ProgressBar = styled.div`
-  background: ${palette.GRAY_LIGHT};
+  background: ${palette.PROGRESSBAR_BG};
   margin: 10px auto 30px;
   width: 250px;
   height: 3px;
