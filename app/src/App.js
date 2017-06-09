@@ -6,8 +6,11 @@ import { Input } from './lib/Input';
 import { CheckboxInput } from './lib/CheckboxInput';
 import { RadioInput } from './lib/RadioInput';
 import { InlineLabel } from './lib/InlineLabel';
+<<<<<<< HEAD
 import { Spinner } from './lib/Spinner';
 import { ProgressBar } from './lib/ProgressBar';
+=======
+>>>>>>> d5b00312d52c79d6aec4e922de3204984870eda9
 
 class App extends Component {
   render() {
@@ -27,6 +30,35 @@ class App extends Component {
         <p>
           <RadioInput type="radio" id="cotton-candy" name="radio-group" />
           <InlineLabel htmlFor="cotton-candy">Cotton candy</InlineLabel>
+<<<<<<< HEAD
+=======
+        </p>
+        <p>
+          <RadioInput shadow type="radio" id="lolipop" name="radio-group-2" defaultChecked />
+          <InlineLabel htmlFor="lolipop">Lolipop</InlineLabel>
+        </p>
+        <p>
+          <RadioInput shadow type="radio" id="candy" name="radio-group-2" />
+          <InlineLabel htmlFor="candy">Candy</InlineLabel>
+        </p>
+
+        <Subtitle>Checkboxes</Subtitle>
+        <p>
+          <CheckboxInput type="checkbox" id="apple-pie" defaultChecked />
+          <InlineLabel htmlFor="apple-pie">Apple pie</InlineLabel>
+        </p>
+        <p>
+          <CheckboxInput type="checkbox" id="cheesecake" />
+          <InlineLabel htmlFor="cheesecake">Cheesecake</InlineLabel>
+        </p>
+        <p>
+          <CheckboxInput shadow type="checkbox" id="brownie" />
+          <InlineLabel htmlFor="brownie">Brownie</InlineLabel>
+        </p>
+        <p>
+          <CheckboxInput shadow type="checkbox" id="blueberry-muffin" />
+          <InlineLabel htmlFor="blueberry-muffin">Blueberry muffin</InlineLabel>
+>>>>>>> d5b00312d52c79d6aec4e922de3204984870eda9
         </p>
         <p>
           <RadioInput shadow type="radio" id="lolipop" name="radio-group-2" defaultChecked />

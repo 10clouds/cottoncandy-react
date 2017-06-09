@@ -33,7 +33,7 @@ export const CheckboxInput = styled.input`
       line-height: 31px;
       width: 32px;
       height: 32px;
-      color: ${props => props.shadow ? palette.PURPLE : 'white'};
+      color: ${props => props.shadow ? palette.CHECK_COLOR : 'white'};
       background: ${props => props.shadow ? 'white' : palette.GRADIENT_BG};
       position: absolute;
       top: -20px;
