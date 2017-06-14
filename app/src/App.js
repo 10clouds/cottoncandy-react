@@ -5,20 +5,51 @@ import { Button } from './lib/Button';
 import { Input } from './lib/Input';
 import { CheckboxInput } from './lib/CheckboxInput';
 import { RadioInput } from './lib/RadioInput';
+import { Menu } from './lib/Menu';
+import { AppHeader } from './lib/AppHeader';
+import { NavLink } from './lib/NavLink';
 import { InlineLabel } from './lib/InlineLabel';
 import { Spinner } from './lib/Spinner';
 import { ProgressBar } from './lib/ProgressBar';
 
 class App extends Component {
+  renderAppMenu() {
+    let links = [
+      {
+        name: 'Home',
+        link: '/'
+      },
+      {
+        name: 'About us',
+        link: '/about'
+      },
+      {
+        name: 'Services',
+        link: '/services'
+      },
+      {
+        name: 'Clients',
+        link: '/clients'
+      },
+    ];
+
+    return (
+      <Menu links={links}/>
+    );
+  }
+
   render() {
     return (
       <div className="App">
         <Title>Cottoncandy UI kit</Title>
+
         <Subtitle>Buttons</Subtitle>
         <Button>Default button</Button>
         <Button primary>Primary button</Button>
+
         <Subtitle>Inputs</Subtitle>
         <Input />
+
         <Subtitle>Radio</Subtitle>
         <p>
           <RadioInput type="radio" id="ice-cream" name="radio-group" defaultChecked />
@@ -50,10 +81,6 @@ class App extends Component {
           <CheckboxInput shadow type="checkbox" id="brownie" />
           <InlineLabel htmlFor="brownie">Brownie</InlineLabel>
         </p>
-        <p>
-          <CheckboxInput shadow type="checkbox" id="blueberry-muffin" />
-          <InlineLabel htmlFor="blueberry-muffin">Blueberry muffin</InlineLabel>
-        </p>
 
         <Subtitle>Spinners</Subtitle>
         <Spinner light />
@@ -61,6 +88,11 @@ class App extends Component {
 
         <Subtitle>Progress bars</Subtitle>
         <ProgressBar />
+
+        <Subtitle>Menu</Subtitle>
+        <AppHeader>
+          {this.renderAppMenu()}
+        </AppHeader>
       </div>
     );
   }
