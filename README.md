@@ -8,7 +8,6 @@ Bootstrapped on https://github.com/facebookincubator/create-react-app
 Clone this repo and run
 
 ```
-cd app
 npm install
 npm start
 ```
