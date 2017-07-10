@@ -10,7 +10,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,9 @@
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.1.6",
+    "@storybook/addon-knobs": "^3.1.8",
+    "@storybook/react": "^2.21.0",
     "prop-types": "^15.5.10",
     "react-scripts": "0.9.5"
   }
