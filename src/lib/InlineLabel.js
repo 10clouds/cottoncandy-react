@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import * as palette from './palette';
+import * as palette from '../palette';
 
 export const InlineLabel = styled.label`
   color: ${palette.MAIN_TXT_COLOR};

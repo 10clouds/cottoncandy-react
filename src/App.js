@@ -1,51 +1,51 @@
 import React, { Component } from 'react';
+
+import { Title, Subtitle } from './lib/Title';
+import Button from './lib/Button';
+import { Input } from './lib/Input';
+import { CheckboxInput } from './lib/CheckboxInput';
+import { RadioInput } from './lib/RadioInput';
+import { Menu } from './lib/Menu';
+import { InlineLabel } from './lib/InlineLabel';
+import { Spinner } from './lib/Spinner';
+import { ProgressBar } from './lib/ProgressBar';
+
 import './App.css';
-import { Title, Subtitle } from './components/Title';
-import Button from './components/Button';
-import { Input } from './components/Input';
-import { CheckboxInput } from './components/CheckboxInput';
-import { RadioInput } from './components/RadioInput';
-import { Menu } from './components/Menu';
-import { AppHeader } from './components/AppHeader';
-import { NavLink } from './components/NavLink';
-import { InlineLabel } from './components/InlineLabel';
-import { Spinner } from './components/Spinner';
-import { ProgressBar } from './components/ProgressBar';
+import Section from './components/Section';
+import AppHeader from './components/AppHeader';
+
+let MENU_LINKS = [
+  {
+    name: 'Home',
+    link: '/'
+  },
+  {
+    name: 'About us',
+    link: '/about'
+  },
+  {
+    name: 'Services',
+    link: '/services'
+  },
+  {
+    name: 'Clients',
+    link: '/clients'
+  },
+];
 
 class App extends Component {
-  renderAppMenu() {
-    let links = [
-      {
-        name: 'Home',
-        link: '/'
-      },
-      {
-        name: 'About us',
-        link: '/about'
-      },
-      {
-        name: 'Services',
-        link: '/services'
-      },
-      {
-        name: 'Clients',
-        link: '/clients'
-      },
-    ];
-
-    return (
-      <Menu links={links}/>
-    );
-  }
-
   render() {
     return (
       <div className="App">
-        <Title>Cottoncandy UI kit</Title>
+        <AppHeader>
+          <Title>Cottoncandy UI kit</Title>
+        </AppHeader>
 
-        <Subtitle>Buttons</Subtitle>
-        <Button>Default button</Button>
-        <Button primary>Primary button</Button>
+        <Section>
+          <Subtitle>Buttons</Subtitle>
+          <Button>Default button</Button>
+          <Button primary>Primary button</Button>
+        </Section>
 
         <Subtitle>Inputs</Subtitle>
         <Input />
@@ -90,9 +90,9 @@ class App extends Component {
         <ProgressBar />
 
         <Subtitle>Menu</Subtitle>
-        <AppHeader>
-          {this.renderAppMenu()}
-        </AppHeader>
+
+        <Menu links={MENU_LINKS}/>
+
       </div>
     );
   }

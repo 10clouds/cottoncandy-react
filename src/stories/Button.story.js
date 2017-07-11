@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 
-import Button from '../components/Button';
+import Button from '../lib/Button';
 import { Row, StoryItem } from './utils.js';
 
 const stories = storiesOf('Core', module);

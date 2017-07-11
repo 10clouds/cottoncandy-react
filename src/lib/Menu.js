@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import * as palette from './palette';
+import * as palette from '../palette';
 import { NavLink } from './NavLink';
 
 const NavMenu = styled.ul`
@@ -17,16 +17,27 @@ const NavItem = styled.li`
   padding: 0 20px;
 `;
 
+const Nav = styled.header`
+  background-color: white;
+  box-shadow: ${palette.MENU_BOX_SHADOW};
+  border-radius: 5px;
+  padding: 24px 40px;
+`;
+
 export class Menu extends Component {
   render() {
     return (
-      <nav>
+      <Nav>
         <NavMenu>
-          {this.props.links.map((item, index) => {
-            return <NavItem key={index}><NavLink href={item.link}>{item.name}</NavLink></NavItem>;
-          })}
+          { this.props.links.map((item, index) =>
+            <NavItem key={ index }>
+              <NavLink href={ item.link }>
+                { item.name }
+              </NavLink>
+            </NavItem>
+          )}
         </NavMenu>
-      </nav>
+      </Nav>
     );
   }
 }
