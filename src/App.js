@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Title, Subtitle } from './lib/Title';
-import { Button } from './lib/Button';
-import { Input } from './lib/Input';
-import { CheckboxInput } from './lib/CheckboxInput';
-import { RadioInput } from './lib/RadioInput';
-import { Menu } from './lib/Menu';
-import { AppHeader } from './lib/AppHeader';
-import { NavLink } from './lib/NavLink';
-import { InlineLabel } from './lib/InlineLabel';
-import { Spinner } from './lib/Spinner';
-import { ProgressBar } from './lib/ProgressBar';
+import { Title, Subtitle } from './components/Title';
+import Button from './components/Button';
+import { Input } from './components/Input';
+import { CheckboxInput } from './components/CheckboxInput';
+import { RadioInput } from './components/RadioInput';
+import { Menu } from './components/Menu';
+import { AppHeader } from './components/AppHeader';
+import { NavLink } from './components/NavLink';
+import { InlineLabel } from './components/InlineLabel';
+import { Spinner } from './components/Spinner';
+import { ProgressBar } from './components/ProgressBar';
 
 class App extends Component {
   renderAppMenu() {
