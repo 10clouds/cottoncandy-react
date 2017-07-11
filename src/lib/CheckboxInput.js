@@ -13,34 +13,34 @@ export const CheckboxInput = styled.input`
     visibility: hidden;
 
     &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: -20px;
-      width: 30px;
-      height: 30px;
-      border: ${props => props.shadow ? 'none' : palette.INPUT_BORDER};
-      box-shadow: ${props => props.shadow ? palette.SHADOW : 'none'};
-      border-radius: 2px;
       background: white;
+      border: ${props => props.shadow ? 'none' : palette.INPUT_BORDER};
+      border-radius: 2px;
+      box-shadow: ${props => props.shadow ? palette.SHADOW : 'none'};
+      content: '';
+      height: 30px;
+      left: 0;
+      position: absolute;
+      top: -20px;
       visibility: visible;
+      width: 30px;
     }
 
     &:after {
+      background: ${props => props.shadow ? 'white' : palette.GRADIENT_BG};
+      border-radius: 2px;
+      color: ${props => props.shadow ? palette.CHECK_COLOR : 'white'};
       content: '✓';
       font-size: 20px;
-      text-align: center;
-      line-height: 31px;
-      width: 32px;
       height: 32px;
-      color: ${props => props.shadow ? palette.CHECK_COLOR : 'white'};
-      background: ${props => props.shadow ? 'white' : palette.GRADIENT_BG};
-      position: absolute;
-      top: -20px;
       left: 0;
-      border-radius: 2px;
+      line-height: 31px;
+      position: absolute;
+      text-align: center;
+      top: -20px;
       transition: all 0.2s ease;
       visibility: visible;
+      width: 32px;
     }
   }
 
