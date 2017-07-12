@@ -1,8 +1,7 @@
 import React from 'react';
 
-import { storiesOf, configure, setAddon } from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 
 import Button from '../lib/Button';
@@ -12,9 +11,6 @@ const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)
-  .addDecorator(story => (
-    <div>{ story() }</div>
-  ))
   .addWithInfo('Button', '', () => (
     <div>
       <Row title="Theme">
@@ -34,6 +30,7 @@ stories
           </Button>
         </StoryItem>
       </Row>
+
       <Row title="Size">
         <StoryItem title="Small">
           <Button size="small">
@@ -51,6 +48,7 @@ stories
           </Button>
         </StoryItem>
       </Row>
+
       <Row title="Other">
         <StoryItem title="Rounded">
           <Button rounded={ true }>
@@ -58,6 +56,7 @@ stories
           </Button>
         </StoryItem>
       </Row>
+
       <Row title="Playground">
         <StoryItem>
           <Button
