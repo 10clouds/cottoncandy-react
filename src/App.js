@@ -51,97 +51,100 @@ let MENU_LINKS = [
   },
 ];
 
+const PageWrapper = styled.div`
+  background-color: #fff;
+  margin: auto;
+  max-width: 1200px;
+`
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <AppHeader>
-          <Title>Cottoncandy UI kit</Title>
-        </AppHeader>
+        <PageWrapper>
 
-        <Section>
-          <Subtitle>Buttons</Subtitle>
-          <Button>Default button</Button>
-          <Button primary>Primary button</Button>
-        </Section>
+          <AppHeader />
 
-        <Subtitle>Inputs</Subtitle>
-        <Input />
+          <Section>
+            <Subtitle>Buttons</Subtitle>
+            <Button>Default button</Button>
+            <Button primary>Primary button</Button>
+          </Section>
 
-        <Subtitle>Radio</Subtitle>
+          <Subtitle>Radio</Subtitle>
 
-        <InputGroupRow>
-          <InputGroup>
-            <Radio
-              checked
-              id="radio-a"
-              label="Radio box"
-              name="radio-group-a"
-            />
-            <Radio
-              id="radio-b"
-              label="Radio box"
-              name="radio-group-a"
-            />
-          </InputGroup>
-          <InputGroup>
-            <Radio
-              checked
-              id="radio-c"
-              label="Radio box"
-              name="radio-group-b"
-              shadow
-            />
-            <Radio
-              id="radio-d"
-              label="Radio box"
-              name="radio-group-b"
-              shadow
-            />
-          </InputGroup>
-        </InputGroupRow>
+          <InputGroupRow>
+            <InputGroup>
+              <Radio
+                checked
+                id="radio-a"
+                label="Radio box"
+                name="radio-group-a"
+              />
+              <Radio
+                id="radio-b"
+                label="Radio box"
+                name="radio-group-a"
+              />
+            </InputGroup>
+            <InputGroup>
+              <Radio
+                checked
+                id="radio-c"
+                label="Radio box"
+                name="radio-group-b"
+                shadow
+              />
+              <Radio
+                id="radio-d"
+                label="Radio box"
+                name="radio-group-b"
+                shadow
+              />
+            </InputGroup>
+          </InputGroupRow>
 
-        <Subtitle>Checkboxes</Subtitle>
+          <Subtitle>Checkboxes</Subtitle>
 
-        <InputGroupRow>
-          <InputGroup>
-            <Checkbox
-              checked
-              id="checkbox-a"
-              label="Check some option"
-            />
-            <Checkbox
-              id="checkbox-b"
-              label="Check some option"
-            />
-          </InputGroup>
+          <InputGroupRow>
+            <InputGroup>
+              <Checkbox
+                checked
+                id="checkbox-a"
+                label="Check some option"
+              />
+              <Checkbox
+                id="checkbox-b"
+                label="Check some option"
+              />
+            </InputGroup>
 
-          <InputGroup>
-            <Checkbox
-              checked
-              id="checkbox-c"
-              label="Check some option"
-              shadow
-            />
-            <Checkbox
-              id="checkbox-d"
-              label="Check some option"
-              shadow
-            />
-          </InputGroup>
-        </InputGroupRow>
+            <InputGroup>
+              <Checkbox
+                checked
+                id="checkbox-c"
+                label="Check some option"
+                shadow
+              />
+              <Checkbox
+                id="checkbox-d"
+                label="Check some option"
+                shadow
+              />
+            </InputGroup>
+          </InputGroupRow>
 
-        <Subtitle>Spinners</Subtitle>
-        <Spinner light />
-        <Spinner small />
+          <Subtitle>Spinners</Subtitle>
+          <Spinner light />
+          <Spinner small />
 
-        <Subtitle>Progress bars</Subtitle>
-        <ProgressBar />
+          <Subtitle>Progress bars</Subtitle>
+          <ProgressBar />
 
-        <Subtitle>Menu</Subtitle>
+          <Subtitle>Menu</Subtitle>
 
-        <Menu links={MENU_LINKS}/>
-
+          <Menu links={MENU_LINKS}/>
+        </PageWrapper>
       </div>
     );
   }
