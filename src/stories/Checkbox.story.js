@@ -19,15 +19,17 @@ stories
     <div>
       <Row title="Theme">
         <StoryItem title="Default">
-          <Checkbox id="checkbox-a"
-                 label="some label"
+          <Checkbox
+            id="checkbox-a"
+            label="some label"
           />
         </StoryItem>
 
         <StoryItem title="With shadow">
-          <Checkbox id="checkbox-c"
-                 label="some label"
-                 shadow
+          <Checkbox
+            id="checkbox-c"
+            label="some label"
+            shadow
           />
         </StoryItem>
 
@@ -35,17 +37,19 @@ stories
       <Row title="State">
 
         <StoryItem title="Default checked">
-          <Checkbox checked
-                 id="checkbox-b"
-                 label="some label"
+          <Checkbox
+            checked
+            id="checkbox-b"
+            label="some label"
           />
         </StoryItem>
 
         <StoryItem title="With shadow checked">
-          <Checkbox checked
-                 id="checkbox-d"
-                 label="some label"
-                 shadow
+          <Checkbox
+            checked
+            id="checkbox-d"
+            label="some label"
+            shadow
           />
         </StoryItem>
       </Row>
@@ -53,7 +57,7 @@ stories
         <StoryItem>
           <Checkbox
             checked={ boolean('Checked', false) }
-            label="some label"
+            label={ text('Label', 'some label') }
             shadow={ boolean('Shadow', false) }
           />
         </StoryItem>

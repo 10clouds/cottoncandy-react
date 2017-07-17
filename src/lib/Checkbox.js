@@ -82,8 +82,9 @@ class Checkbox extends Component {
 
   render() {
     return (
-      <StyledCheckbox shadow={this.props.shadow}>
+      <StyledCheckbox shadow={ this.props.shadow }>
         <input
+          name={ this.props.name }
           type="checkbox"
           checked={ this.state.checked }
           onChange={ this.toggleChecked }
@@ -97,6 +98,7 @@ class Checkbox extends Component {
 }
 
 Checkbox.propTypes = {
+  name: PropTypes.string,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
   shadow: PropTypes.bool,

@@ -50,8 +50,8 @@ const StyledRadio = styled.div`
 
     &:checked + label {
   		&:after {
-  			opacity: 1;
-    		transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
   		}
     }
   }
@@ -79,7 +79,7 @@ class Radio extends Component {
 
   render() {
     return (
-      <StyledRadio shadow={this.props.shadow}>
+      <StyledRadio shadow={ this.props.shadow }>
         <input
           name={ this.props.name }
           type="radio"

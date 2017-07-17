@@ -19,17 +19,19 @@ stories
     <div>
       <Row title="Theme">
         <StoryItem title="Default">
-          <Radio id="radio-a"
-                 label="some label"
-                 name="radio-group-a"
+          <Radio
+            id="radio-a"
+            label="some label"
+            name="radio-group-a"
           />
         </StoryItem>
 
         <StoryItem title="With shadow">
-          <Radio id="radio-c"
-                 label="some label"
-                 name="radio-group-b"
-                 shadow
+          <Radio
+            id="radio-c"
+            label="some label"
+            name="radio-group-b"
+            shadow
           />
         </StoryItem>
 
@@ -37,19 +39,21 @@ stories
       <Row title="State">
 
         <StoryItem title="Default checked">
-          <Radio checked
-                 id="radio-b"
-                 label="some label"
-                 name="radio-group-a"
+          <Radio
+            checked
+            id="radio-b"
+            label="some label"
+            name="radio-group-a"
           />
         </StoryItem>
 
         <StoryItem title="With shadow checked">
-          <Radio checked
-                 id="radio-d"
-                 label="some label"
-                 name="radio-group-b"
-                 shadow
+          <Radio
+            checked
+            id="radio-d"
+            label="some label"
+            name="radio-group-b"
+            shadow
           />
         </StoryItem>
       </Row>
@@ -57,7 +61,7 @@ stories
         <StoryItem>
           <Radio
             checked={ boolean('Checked', false) }
-            label="some label"
+            label={ text('Label', 'some label') }
             shadow={ boolean('Shadow', false) }
           />
         </StoryItem>
