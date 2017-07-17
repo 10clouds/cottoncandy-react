@@ -9,7 +9,7 @@ export const StoryItem = (props) => (
         </h2>
     }
     <p>{ props.description }</p>
-    <div style={ { display: 'flex', 'justifyContent': 'center'} }>
+    <div style={ { display: 'flex', fontFamily: 'sans-serif', 'justifyContent': 'center'} }>
       { props.children }
     </div>
   </div>

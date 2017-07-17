@@ -4,10 +4,10 @@ import styled from 'styled-components';
 import { Title, Subtitle } from './lib/Title';
 import Button from './lib/Button';
 import { Input } from './lib/Input';
-import { CheckboxInput } from './lib/CheckboxInput';
-import { RadioInput } from './lib/RadioInput';
+import Checkbox from './lib/Checkbox';
+import InputGroup from './lib/InputGroup';
+import Radio from './lib/Radio';
 import { Menu } from './lib/Menu';
-import { InlineLabel } from './lib/InlineLabel';
 import { Spinner } from './lib/Spinner';
 import { ProgressBar } from './lib/ProgressBar';
 
@@ -54,40 +54,51 @@ class App extends Component {
             <Button primary>Primary button</Button>
           </Section>
 
-          <Subtitle>Inputs</Subtitle>
-          <Input />
-
           <Subtitle>Radio</Subtitle>
-          <p>
-            <RadioInput type="radio" id="ice-cream" name="radio-group" defaultChecked />
-            <InlineLabel htmlFor="ice-cream">Ice cream</InlineLabel>
-          </p>
-          <p>
-            <RadioInput type="radio" id="cotton-candy" name="radio-group" />
-            <InlineLabel htmlFor="cotton-candy">Cotton candy</InlineLabel>
-          </p>
-          <p>
-            <RadioInput shadow type="radio" id="lolipop" name="radio-group-2" defaultChecked />
-            <InlineLabel htmlFor="lolipop">Lolipop</InlineLabel>
-          </p>
-          <p>
-            <RadioInput shadow type="radio" id="candy" name="radio-group-2" />
-            <InlineLabel htmlFor="candy">Candy</InlineLabel>
-          </p>
+
+          <InputGroup>
+            <Radio
+              checked
+              label="Radio box"
+              name="radio-group-a"
+            />
+            <Radio
+              label="Radio box"
+              name="radio-group-a"
+            />
+            <Radio
+              checked
+              label="Radio box"
+              name="radio-group-b"
+              shadow
+            />
+            <Radio
+              label="Radio box"
+              name="radio-group-b"
+              shadow
+            />
+          </InputGroup>
 
           <Subtitle>Checkboxes</Subtitle>
-          <p>
-            <CheckboxInput type="checkbox" id="apple-pie" defaultChecked />
-            <InlineLabel htmlFor="apple-pie">Apple pie</InlineLabel>
-          </p>
-          <p>
-            <CheckboxInput type="checkbox" id="cheesecake" />
-            <InlineLabel htmlFor="cheesecake">Cheesecake</InlineLabel>
-          </p>
-          <p>
-            <CheckboxInput shadow type="checkbox" id="brownie" />
-            <InlineLabel htmlFor="brownie">Brownie</InlineLabel>
-          </p>
+
+          <InputGroup>
+            <Checkbox
+              checked
+              label="Check some option"
+            />
+            <Checkbox
+              label="Check some option"
+            />
+            <Checkbox
+              checked
+              label="Check some option"
+              shadow
+            />
+            <Checkbox
+              label="Check some option"
+              shadow
+            />
+          </InputGroup>
 
           <Subtitle>Spinners</Subtitle>
           <Spinner light />
