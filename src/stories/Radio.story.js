@@ -12,9 +12,6 @@ const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)
-  .addDecorator(story => (
-    <div>{ story() }</div>
-  ))
   .addWithInfo('Radio', '', () => (
     <div>
       <Row title="Theme">
@@ -25,7 +22,6 @@ stories
             name="radio-group-a"
           />
         </StoryItem>
-
         <StoryItem title="With shadow">
           <Radio
             id="radio-c"
@@ -34,29 +30,28 @@ stories
             shadow
           />
         </StoryItem>
-
       </Row>
-      <Row title="State">
 
-        <StoryItem title="Default checked">
+      <Row title="Checked">
+        <StoryItem title="Default">
           <Radio
             checked
             id="radio-b"
             label="some label"
-            name="radio-group-a"
+            name="radio-group-c"
           />
         </StoryItem>
-
-        <StoryItem title="With shadow checked">
+        <StoryItem title="With shadow">
           <Radio
             checked
             id="radio-d"
             label="some label"
-            name="radio-group-b"
+            name="radio-group-d"
             shadow
           />
         </StoryItem>
       </Row>
+
       <Row title="Playground">
         <StoryItem>
           <Radio

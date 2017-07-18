@@ -12,9 +12,6 @@ const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)
-  .addDecorator(story => (
-    <div>{ story() }</div>
-  ))
   .addWithInfo('Checkbox', '', () => (
     <div>
       <Row title="Theme">
@@ -24,7 +21,6 @@ stories
             label="some label"
           />
         </StoryItem>
-
         <StoryItem title="With shadow">
           <Checkbox
             id="checkbox-c"
@@ -32,19 +28,17 @@ stories
             shadow
           />
         </StoryItem>
-
       </Row>
-      <Row title="State">
 
-        <StoryItem title="Default checked">
+      <Row title="Checked">
+        <StoryItem title="Default">
           <Checkbox
             checked
             id="checkbox-b"
             label="some label"
           />
         </StoryItem>
-
-        <StoryItem title="With shadow checked">
+        <StoryItem title="With shadow">
           <Checkbox
             checked
             id="checkbox-d"
@@ -53,6 +47,7 @@ stories
           />
         </StoryItem>
       </Row>
+
       <Row title="Playground">
         <StoryItem>
           <Checkbox

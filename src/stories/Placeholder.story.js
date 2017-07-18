@@ -64,13 +64,13 @@ stories
       </Row>
 
       <Row title="Images">
-        <StoryItem title="Paragraph with an image">
+        <StoryItem title="Aligned to the left">
           <Placeholder>
             <img src="" alt="" />
             <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit. Fusce justo nisi, lacinia id eros eu.</p></div>
           </Placeholder>
         </StoryItem>
-        <StoryItem title="Paragraph with a centered image">
+        <StoryItem title="Centered">
           <Placeholder>
             <div><img src="" alt="" /></div>
             <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit.</p></div>
