@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const InputGroup = styled.div`
+const StyledInputGroup = styled.div`
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +12,7 @@ const InputGroup = styled.div`
   }
 `
 
-class StyledInputGroup extends Component {
+class InputGroup extends Component {
   render() {
     return (
       <StyledInputGroup />
@@ -21,7 +20,6 @@ class StyledInputGroup extends Component {
   }
 }
 
-InputGroup.propTypes = {
-}
+InputGroup.propTypes = {}
 
 export default InputGroup;

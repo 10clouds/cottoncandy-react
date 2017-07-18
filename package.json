@@ -37,6 +37,7 @@
     "@storybook/addon-knobs": "^3.1.8",
     "@storybook/react": "^3.1.8",
     "prop-types": "^15.5.10",
-    "react-scripts": "^1.0.10"
+    "react-scripts": "^1.0.10",
+    "why-did-you-update": "0.0.8"
   }
 }

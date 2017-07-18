@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { Title, Subtitle } from './lib/Title';
+import { Subtitle } from './lib/Title';
 import Button from './lib/Button';
-import { Input } from './lib/Input';
 import Checkbox from './lib/Checkbox';
 import InputGroup from './lib/InputGroup';
 import Radio from './lib/Radio';
