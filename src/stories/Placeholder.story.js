@@ -67,15 +67,46 @@ stories
         <StoryItem title="Paragraph with an image">
           <Placeholder>
             <img src="" alt="" />
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit.</p></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit. Fusce justo nisi, lacinia id eros eu.</p></div>
+          </Placeholder>
+        </StoryItem>
+        <StoryItem title="Paragraph with a centered image">
+          <Placeholder>
+            <div><img src="" alt="" /></div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit.</p></div>
+          </Placeholder>
+        </StoryItem>
+      </Row>
+
+      <Row title="Themes">
+        <StoryItem title="Primary">
+          <Placeholder theme="primary">
+            <img src="" alt="" />
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit.</p></div>
+          </Placeholder>
+        </StoryItem>
+        <StoryItem title="Secondary">
+          <Placeholder theme="secondary">
+            <img src="" alt="" />
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit.</p></div>
+          </Placeholder>
+        </StoryItem>
+        <StoryItem title="Transparent">
+          <Placeholder theme="transparent">
+            <img src="" alt="" />
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo nisi, lacinia id eros eu, fringilla laoreet elit elit elit.</p></div>
           </Placeholder>
         </StoryItem>
       </Row>
 
       <Row title="Playground">
         <StoryItem>
-          <Placeholder style={ { width: number('style.width', 200) } }>
-            <p>{ text('content', '') }</p>
+          <Placeholder
+            style={ { width: number('Style.width', 200) } }
+            theme={ select('Theme', ['primary', 'secondary', 'transparent']) }
+          >
+            { boolean('Image', false) ? <img src="" alt="" /> : null }
+            <div><p>{ text('Text', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit') }</p></div>
           </Placeholder>
         </StoryItem>
       </Row>
