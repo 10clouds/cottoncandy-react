@@ -7,6 +7,7 @@
     "src/lib"
   ],
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -30,12 +31,13 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "source-map-explorer": "^1.4.0",
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^3.1.6",
-    "@storybook/addon-knobs": "^3.1.8",
-    "@storybook/react": "^3.1.8",
+    "@storybook/addon-info": "^3.1.9",
+    "@storybook/addon-knobs": "^3.1.9",
+    "@storybook/react": "^3.1.9",
     "prop-types": "^15.5.10",
     "react-scripts": "^1.0.10",
     "why-did-you-update": "0.0.8"

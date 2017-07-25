@@ -9,6 +9,7 @@ setAddon(infoAddon);
 // https://github.com/storybooks/storybook/issues/1305
 PropVal.propTypes = {
   ...PropVal.propTypes,
+  val: PropTypes.any,
   maxPropObjectKeys: PropTypes.number,
   maxPropArrayLength: PropTypes.number,
   maxPropStringLength: PropTypes.number,
