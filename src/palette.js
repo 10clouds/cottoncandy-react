@@ -1,4 +1,5 @@
 export const PRIMARY = '#5a79e6';
+export const SECONDARY = '#ccd5f8';
 
 export const MAIN_TXT_COLOR = '#39393b';
 export const TEXT_COLOR = '#202020';

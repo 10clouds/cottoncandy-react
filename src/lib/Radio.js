@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { noop } from './utils';
 import * as palette from '../palette';
 
 const StyledRadio = styled.div`
@@ -102,7 +103,7 @@ Radio.propTypes = {
 }
 
 Radio.defaultProps = {
-  onChange: () => {},
+  onChange: noop,
 }
 
 export default Radio;

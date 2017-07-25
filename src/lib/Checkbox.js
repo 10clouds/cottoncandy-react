@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { noop } from './utils';
 import * as palette from '../palette';
 
 const StyledCheckbox = styled.div`
@@ -105,7 +106,7 @@ Checkbox.propTypes = {
 }
 
 Checkbox.defaultProps = {
-  onChange: () => {},
+  onChange: noop,
 }
 
 export default Checkbox;

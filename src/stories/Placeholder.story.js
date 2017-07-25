@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
@@ -99,7 +98,7 @@ stories
         </StoryItem>
       </Row>
 
-      <Row title="Playground">
+      <Row title="Playground" style={ { backgroundColor: text('Style.backgroundColor', 'rgba(238, 238, 238, .3)') } }>
         <StoryItem>
           <Placeholder
             style={ { width: number('Style.width', 200) } }
