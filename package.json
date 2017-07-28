@@ -13,7 +13,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "@storybook/addon-info": "^3.1.9",
     "@storybook/addon-knobs": "^3.1.9",
     "@storybook/react": "^3.1.9",
+    "@storybook/storybook-deployer": "^2.0.0",
     "prop-types": "^15.5.10",
     "react-scripts": "^1.0.10",
     "why-did-you-update": "0.0.8"
