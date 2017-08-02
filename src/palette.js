@@ -1,5 +1,16 @@
-export const PRIMARY = '#5a79e6';
-export const SECONDARY = '#ccd5f8';
+export const PRIMARY = {
+  light: '#6f8aee',
+  base: '#5a79e6',
+  midDark: '#5973e7',
+  dark: '#4862e1',
+}
+
+export const SECONDARY = {
+  light: '#ebeff5',
+  base: '#ebebeb',
+  midDark: '#ccd5f8',
+  dark: '#758092',
+}
 
 export const MAIN_TXT_COLOR = '#39393b';
 export const TEXT_COLOR = '#202020';

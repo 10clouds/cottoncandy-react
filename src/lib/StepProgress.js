@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import * as palette from '../palette';
 
 const StyledStep = styled.div`
-  background-color: #ebeff5;
+  background-color: ${palette.SECONDARY.light};
   border-radius: 6px;
   display: inline-block;
   height: 4px;
@@ -16,7 +16,7 @@ const StyledStep = styled.div`
   &:before {
     background: white;
     border-radius: 50%;
-    box-shadow: 0 0 15px 0 #ebebeb;
+    box-shadow: 0 0 15px 0 ${palette.SECONDARY.base};
     content: '';
     display: inline-block;
     height: 30px;
@@ -29,7 +29,7 @@ const StyledStep = styled.div`
   }
 
   &:after {
-    background: ${p => p.active ? 'linear-gradient(to bottom, #6f8aee, #4862e1)' : '#ebeff5'};
+    background: ${p => p.active ? `linear-gradient(to bottom, ${palette.PRIMARY.light}, ${palette.PRIMARY.dark})` : '#ebeff5'};
     border-radius: 50%;
     content: '';
     height: 16px;
@@ -46,7 +46,7 @@ const StyledStep = styled.div`
 
 const StyledLabel = styled.span`
   bottom: 22px;
-  color: ${ p => p.active ? '#5973e7' : '#758092' };
+  color: ${ p => p.active ? palette.PRIMARY.midDark : palette.SECONDARY.dark };
   display: inline-block;
   left: 0;
   padding: 0 .5rem;
@@ -56,7 +56,7 @@ const StyledLabel = styled.span`
 `;
 
 const StyledFill = styled.span`
-  background-image: linear-gradient(to bottom, #6f8aee, #4862e1);
+  background-image: linear-gradient(to bottom, ${palette.PRIMARY.light}, ${palette.PRIMARY.dark});
   display: block;
   height: 4px;
   left: 0;

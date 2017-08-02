@@ -51,15 +51,15 @@ const StyledToogle = styled.div`
     display: flex;
     align-items: center;
     position: relative;
-    border: ${p => p.theme === 'primary' ? `solid 1px ${palette.PRIMARY}` : 'none'};
+    border: ${p => p.theme === 'primary' ? `solid 1px ${palette.PRIMARY.base}` : 'none'};
     border-radius: 18px;
     transition: opacity .2s ease-out;
     box-shadow: ${p => p.theme === 'primary' ? 'none' : '0 0 15px 0 #d6d6d6'};
-    background-color: #ffffff;
+    background-color: white;
 
     &:before,
     &:after {
-      color: ${palette.PRIMARY};
+      color: ${palette.PRIMARY.base};
       position: absolute;
       transition: opacity 2s ease-out;
       opacity: 0;
@@ -79,7 +79,7 @@ const StyledToogle = styled.div`
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: ${palette.PRIMARY};
+    background-color: ${palette.PRIMARY.base};
     margin-left: 6px;
     transition: transform .2s ease-out;
   }
