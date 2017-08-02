@@ -12,6 +12,10 @@ export const SECONDARY = {
   dark: '#758092',
 }
 
+export const RED = {
+  base: '#ff3131',
+}
+
 export const MAIN_TXT_COLOR = '#39393b';
 export const TEXT_COLOR = '#202020';
 export const BUTTON_BG = 'linear-gradient(to bottom, #6f8aee, #4862e1)';

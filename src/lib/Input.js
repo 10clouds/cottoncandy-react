@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   height: 24px;
   border-radius: 2px;
   background-color: white;
-  border: ${p => console.log(p) || p.valid ? `solid 1px ${palette.SECONDARY}` : `solid 1px #ff3131`};
+  border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px #ff3131`};
 `;
 
 const StyledTitle = styled.span`
