@@ -12,8 +12,25 @@ export const SECONDARY = {
   dark: '#758092',
 }
 
+export const TYPOGRAPHY = {
+  main: '#39393b',
+  heading: '#202020',
+}
+
 export const RED = {
   base: '#ff3131',
+}
+
+export const palette = {
+  PRIMARY,
+  SECONDARY,
+  TYPOGRAPHY,
+  RED,
+}
+
+export const FONT = {
+  main: 'Poppins',
+  heading: 'Poppins',
 }
 
 export const MAIN_TXT_COLOR = '#39393b';
