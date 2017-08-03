@@ -31,7 +31,7 @@ class SVGElement {
   }
 }
 
-const StyledProgressBar = styled.div`
+const StyledProgress = styled.div`
   background: #ebeef4;
   margin: 10px auto 30px;
   width: 250px;
@@ -78,7 +78,7 @@ const CircleContainer = styled.div`
 }
 `;
 
-class ProgressBar extends Component {
+class Progress extends Component {
   static propTypes = {
     showLabel: PropTypes.bool,
     type: PropTypes.oneOf(['bar', 'circle']),
@@ -117,7 +117,7 @@ class ProgressBar extends Component {
   render() {
     return (
       this.props.type === 'bar' ?
-        <StyledProgressBar value={ this.value } /> : (
+        <StyledProgress value={ this.value } /> : (
         <CircleContainer value={ this.value } showLabel={ this.props.showLabel }>
           <svg ref={ element => this.svgElement = element } width="70" height="70">
             <Path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z" />
@@ -128,4 +128,4 @@ class ProgressBar extends Component {
   }
 };
 
-export default ProgressBar;
+export default Progress;
