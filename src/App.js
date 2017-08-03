@@ -7,8 +7,8 @@ import Checkbox from './lib/Checkbox';
 import InputGroup from './lib/InputGroup';
 import Radio from './lib/Radio';
 import { Menu } from './lib/Menu';
-import { Spinner } from './lib/Spinner';
-import { ProgressBar } from './lib/ProgressBar';
+import Spinner from './lib/Spinner';
+import ProgressBar from './lib/ProgressBar';
 
 import './App.css';
 import Section from './components/Section';
@@ -104,7 +104,7 @@ class App extends Component {
           <Spinner small />
 
           <Subtitle>Progress bars</Subtitle>
-          <ProgressBar />
+          <ProgressBar value={ 0.5 } />
 
           <Subtitle>Menu</Subtitle>
 

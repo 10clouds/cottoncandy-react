@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 
 import * as palette from '../palette';
 
-export const Spinner = styled.div`
+export const StyledSpinner = styled.div`
   width: ${props => props.small ? '35px' : '75px'};
   height: ${props => props.small ? '35px' : '75px'};
   border: 2px solid ${palette.PROGRESSBAR_STRIP};
@@ -21,3 +23,13 @@ export const Spinner = styled.div`
     }
   }
 `;
+
+const Spinner = (props) => (
+  <StyledSpinner { ...props }/>
+);
+
+Spinner.propTypes = {
+  children: PropTypes.string,
+}
+
+export default Spinner;
