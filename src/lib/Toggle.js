@@ -67,10 +67,12 @@ const StyledToogle = styled.div`
 
     &:before {
       left: 8px;
+      top: 6px;
     }
 
     &:after {
       right: 8px;
+      top: 6px;
     }
   }
 
