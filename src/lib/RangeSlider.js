@@ -87,7 +87,7 @@ class RangeSlider extends Component {
 
   onMouseDown = (e) => {
     e.preventDefault();
-    this.grabPosition = e.clientX - (this.sliderElement.getBoundingClientRect().x + this.thumbElement.offsetLeft);
+    this.grabPosition = e.clientX - (this.sliderElement.getBoundingClientRect().left + this.thumbElement.offsetLeft);
     document.addEventListener('mousemove', this.onMouseMove)
     document.addEventListener('mouseup', this.onMouseUp)
   };
@@ -143,7 +143,7 @@ class RangeSlider extends Component {
   }
 
   getLeftOffset(pointerPosition, maxPosition) {
-    const newPosition = Math.round(pointerPosition - this.sliderElement.getBoundingClientRect().x - this.grabPosition);
+    const newPosition = Math.round(pointerPosition - this.sliderElement.getBoundingClientRect().left - this.grabPosition);
     const leftOffset = Math.max(0, Math.min(newPosition, maxPosition));
     return leftOffset;
   }
