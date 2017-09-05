@@ -68,6 +68,10 @@ const StyledToogle = styled.div`
     &:before {
       left: 8px;
       top: 6px;
+      
+      @supports (-ms-ime-align:auto) {
+        top: 4px;
+      }
     }
 
     &:after {
