@@ -173,13 +173,13 @@ class Dropdown extends PureComponent {
     if (this.props.autoHide !== false) {
       this.hide();
     }
-  }
+  };
 
   handleOptionClick = (event, value) => {
     this.hide();
     this.setState({ value });
     this.props.onChange(value);
-  }
+  };
 
   render() {
     return (

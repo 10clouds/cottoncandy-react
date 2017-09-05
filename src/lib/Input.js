@@ -56,7 +56,7 @@ class Input extends Component {
   static defaultProps = {
     required: false,
     onBlur: noop,
-  }
+  };
 
   state = {
     valid: true,

@@ -48,7 +48,7 @@ const StyledSliderHandle = styled.div`
   position: absolute;
   background-image: linear-gradient(to bottom, #6f8aee, #4862e1);
   border-radius: 50%;
-`
+`;
 
 class RangeSlider extends Component {
   static propTypes = {
@@ -62,7 +62,7 @@ class RangeSlider extends Component {
     min: 0,
     max: 100,
     step: 1,
-  }
+  };
 
   state = {
     leftOffset: 0,
@@ -179,6 +179,6 @@ class RangeSlider extends Component {
       </StyledContainer>
     );
   }
-};
+}
 
 export default RangeSlider;

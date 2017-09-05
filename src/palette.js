@@ -3,35 +3,35 @@ export const PRIMARY = {
   base: '#5a79e6',
   midDark: '#5973e7',
   dark: '#4862e1',
-}
+};
 
 export const SECONDARY = {
   light: '#ebeff5',
   base: '#ebebeb',
   midDark: '#ccd5f8',
   dark: '#758092',
-}
+};
 
 export const TYPOGRAPHY = {
   main: '#39393b',
   heading: '#202020',
-}
+};
 
 export const RED = {
   base: '#ff3131',
-}
+};
 
 export const palette = {
   PRIMARY,
   SECONDARY,
   TYPOGRAPHY,
   RED,
-}
+};
 
 export const FONT = {
   main: 'Poppins',
   heading: 'Poppins',
-}
+};
 
 export const MAIN_TXT_COLOR = '#39393b';
 export const TEXT_COLOR = '#202020';
