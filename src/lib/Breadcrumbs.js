@@ -76,20 +76,16 @@ const StyledNav = styled.nav`
 
 class Breadcrumbs extends Component {
   render() {
-    let links = this.props.links.map((el, idx) => {
-      return (
-        <span key={idx}>
-          <Link href={el.href}>
-            {!!el.icon && <i className={el.icon}></i>}
-            {!!el.text && <span>{el.text}</span> }
-          </Link>
-        </span>
-      );
-    });
-
     return (
       <StyledNav shadow={ this.props.shadow }>
-        {links}
+        { this.props.links.map((el, idx) =>
+          <span key={idx}>
+            <Link href={el.href}>
+              {!!el.icon && <i className={el.icon}></i>}
+              {!!el.text && <span>{el.text}</span> }
+            </Link>
+          </span>
+        )}
       </StyledNav>
     )
   }
