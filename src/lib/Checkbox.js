@@ -103,10 +103,10 @@ Checkbox.propTypes = {
   checked: PropTypes.bool,
   onChange: PropTypes.func,
   shadow: PropTypes.bool,
-}
+};
 
 Checkbox.defaultProps = {
   onChange: noop,
-}
+};
 
 export default Checkbox;

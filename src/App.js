@@ -37,7 +37,7 @@ const PageWrapper = styled.div`
   background-color: #fff;
   margin: auto;
   max-width: 1200px;
-`
+`;
 
 class App extends Component {
   render() {

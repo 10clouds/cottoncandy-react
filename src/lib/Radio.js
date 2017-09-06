@@ -100,10 +100,10 @@ Radio.propTypes = {
   checked: PropTypes.bool,
   onChange: PropTypes.func,
   shadow: PropTypes.bool,
-}
+};
 
 Radio.defaultProps = {
   onChange: noop,
-}
+};
 
 export default Radio;

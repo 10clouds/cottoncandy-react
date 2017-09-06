@@ -30,6 +30,6 @@ const Spinner = (props) => (
 
 Spinner.propTypes = {
   children: PropTypes.string,
-}
+};
 
 export default Spinner;

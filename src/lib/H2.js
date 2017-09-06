@@ -11,12 +11,12 @@ const StyledH2 = styled.h2`
   text-align: left;
 `;
 
-const Button = (props) => (
+const H2 = (props) => (
   <StyledH2 { ...props }/>
 );
 
-Button.propTypes = {
+H2.propTypes = {
   children: PropTypes.string,
-}
+};
 
-export default Button;
+export default H2;

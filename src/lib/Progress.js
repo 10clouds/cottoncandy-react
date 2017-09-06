@@ -89,7 +89,7 @@ class Progress extends Component {
     showLabel: false,
     type: 'bar',
     value: 0,
-  }
+  };
 
   componentDidMount() {
     this.initializeElements();
@@ -126,6 +126,6 @@ class Progress extends Component {
       )
     )
   }
-};
+}
 
 export default Progress;
