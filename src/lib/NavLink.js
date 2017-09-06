@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../palette';
 
 export const NavLink = styled.a`
-  color: ${palette.MAIN_TXT_COLOR};
+  color: ${palette.TYPOGRAPHY.main};
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
@@ -11,7 +11,7 @@ export const NavLink = styled.a`
   display: inline-block;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
-  transition: ${palette.TRANSITION};
+  transition: ${palette.TRANSITION.main};
   transition-property: border-color, color;
 
   &:hover,

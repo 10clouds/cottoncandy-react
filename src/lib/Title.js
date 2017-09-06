@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../palette';
 
 export const Title = styled.h1`
-  color: ${palette.TEXT_COLOR};
+  color: ${palette.TYPOGRAPHY.heading};
   font-weight: 300;
   font-size: 50px;
 `;
 
 export const Subtitle = styled.h2`
-  color: ${palette.TEXT_COLOR};
+  color: ${palette.TYPOGRAPHY.heading};
   font-weight: 300;
   font-size: 22px;
 `;

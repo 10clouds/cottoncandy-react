@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../palette';
 import { noop } from './utils';
 
 const StyledWrapper = styled.div`
@@ -52,8 +52,8 @@ const StyledButton = styled.button`
 `;
 
 const StyledDropdown = styled.ul`
-  background-color: #ffffff;
-  background: #fff;
+  background-color: ${style.BACKGROUND.main};
+  background: ${style.BACKGROUND.main};
   border-radius: 5px;
   box-shadow: 0 0 ${p => p.shadowLevel * 8}px 0 #ebebeb;
   color: black;

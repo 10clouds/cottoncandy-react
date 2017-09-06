@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../palette';
 
 const StyledContainer = styled.div`
   width: 100%;

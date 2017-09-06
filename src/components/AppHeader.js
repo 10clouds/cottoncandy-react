@@ -19,7 +19,7 @@ const StyledLogo = styled.div`
 
 const Title = styled.h1`
   align-self: flex-start;
-  color: ${palette.TEXT_COLOR};
+  color: ${palette.TYPOGRAPHY.heading};
   font-weight: 300;
   font-size: 50px;
 `

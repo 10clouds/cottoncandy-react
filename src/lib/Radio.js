@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { noop } from './utils';
-import * as palette from '../palette';
+import { palette, style } from '../palette';
 
 const StyledRadio = styled.div`
   display: inline-block;
@@ -13,7 +13,7 @@ const StyledRadio = styled.div`
     position: absolute;
 
     + label {
-      color: ${palette.MAIN_TXT_COLOR};
+      color: ${palette.TYPOGRAPHY.main};
       cursor: pointer;
       font-size: 14px;
       line-height: ${props => props.shadow ? '30px' : '32px'};
@@ -22,9 +22,9 @@ const StyledRadio = styled.div`
 
       &:before {
         background: white;
-        border: ${props => props.shadow ? 'none' : palette.INPUT_BORDER};
+        border: ${props => props.shadow ? 'none' : style.BORDER.input};
         border-radius: 50%;
-        box-shadow: ${props => props.shadow ? palette.SHADOW : 'none'};
+        box-shadow: ${props => props.shadow ? style.SHADOW.main : 'none'};
         content: '';
         height: 30px;
         left: 0;
@@ -35,7 +35,7 @@ const StyledRadio = styled.div`
       }
 
       &:after {
-        background: ${palette.GRADIENT_BG};
+        background: ${style.BACKGROUND.gradient};
         border-radius: 100%;
         content: '';
         height: 16px;

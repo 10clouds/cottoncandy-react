@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../palette';
 import { NavLink } from './NavLink';
 
 const NavMenu = styled.ul`
@@ -17,8 +17,8 @@ const NavItem = styled.li`
 `;
 
 const Nav = styled.header`
-  background-color: white;
-  box-shadow: ${palette.MENU_BOX_SHADOW};
+  background-color: ${style.BACKGROUND.main};
+  box-shadow: ${style.SHADOW.menu};
   border-radius: 5px;
   padding: 24px 40px;
 `;

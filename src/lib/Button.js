@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../palette';
 
 const StyledButton = styled.button`
-  border: ${p => p.theme === 'ternary' ? 'none' : palette.BUTTON_BORDER};
-  box-shadow: ${p => p.theme === 'ternary' ? '0 0 12px 0px rgba(124, 124, 124, 0.5);' : 'none'};
+  border: ${p => p.theme === 'ternary' ? 'none' : style.BORDER.button};
+  box-shadow: ${p => p.theme === 'ternary' ? style.SHADOW.button : 'none'};
   border-radius: ${p => p.rounded ? '38px' : '5px' };
-  background: ${p => p.theme === 'primary' ? palette.GRADIENT_BG : 'white'};
-  color: ${p => p.theme === 'primary' ? 'white' : palette.BUTTON_TXT_COLOR};
+  background: ${p => p.theme === 'primary' ? style.BACKGROUND.gradient : 'white'};
+  color: ${p => p.theme === 'primary' ? 'white' : palette.TYPOGRAPHY.button};
   cursor: pointer;
   font-size: 16px;
   padding: ${p =>

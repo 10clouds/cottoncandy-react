@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../palette';
 
 const StyledStep = styled.div`
   background-color: ${palette.SECONDARY.light};
