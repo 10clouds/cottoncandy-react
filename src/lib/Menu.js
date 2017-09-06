@@ -29,7 +29,7 @@ export class Menu extends Component {
       <Nav>
         <NavMenu>
           { this.props.links.map((item, index) =>
-            <NavItem key={ index }>
+            <NavItem key={ item.name + index }>
               <NavLink href={ item.link }>
                 { item.name }
               </NavLink>
