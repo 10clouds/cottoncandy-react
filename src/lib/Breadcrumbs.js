@@ -9,11 +9,11 @@ import * as palette from '../palette';
 const StyledNav = styled.nav`
   font-family: ${palette.FONT.main};
 
-  height: ${props => props.shadow ? '45px' : 'auto'};
-  border-radius: ${props => props.shadow ? '5px' : 'none'};
-  box-shadow: ${props => props.shadow ? palette.SHADOW : 'none'};
+  height: ${p => p.withShadow ? '45px' : 'auto'};
+  border-radius: ${p => p.withShadow ? '5px' : 'none'};
+  box-shadow: ${p => p.withShadow ? palette.SHADOW : 'none'};
   
-  line-height: ${props => props.shadow ? '45px' : 'normal'};
+  line-height: ${p => p.withShadow ? '45px' : 'normal'};
   vertical-align: middle;
   
   overflow: hidden;
@@ -24,9 +24,9 @@ const StyledNav = styled.nav`
     display: inline-block;
     position: relative;
     
-    height: ${props => props.shadow ? '45px' : 'auto'};
+    height: ${p => p.withShadow ? '45px' : 'auto'};
     
-    padding-left: ${props => props.shadow ? '24px' : '4px'};
+    padding-left: ${p => p.withShadow ? '24px' : '4px'};
         
     :first-child {
       padding-left: 0px;
@@ -54,18 +54,18 @@ const StyledNav = styled.nav`
 
     :after {
       content: '';
-      opacity: ${props => props.shadow ? '1' : '0.5'};
+      opacity: ${p => p.withShadow ? '1' : '0.5'};
       position: absolute;
       transform: scale(0.70) rotate(45deg);
       z-index: 1;
       background: transparent;
-      border-top: 2px solid ${props => props.shadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
-      border-right: 2px solid ${props => props.shadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
+      border-top: 2px solid ${p => p.withShadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
+      border-right: 2px solid ${p => p.withShadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
 
-      top: ${props => props.shadow ? '-1px' : '7px'};
-      right: ${props => props.shadow ? '-23px' : '-5px'};
-      width: ${props => props.shadow ? '45px' : '10px'}; 
-      height: ${props => props.shadow ? '45px' : '10px'};
+      top: ${p => p.withShadow ? '-1px' : '7px'};
+      right: ${p => p.withShadow ? '-23px' : '-5px'};
+      width: ${p => p.withShadow ? '45px' : '10px'}; 
+      height: ${p => p.withShadow ? '45px' : '10px'};
     }
     
     :last-child:after {
@@ -74,25 +74,21 @@ const StyledNav = styled.nav`
   }
 `;
 
-class Breadcrumbs extends Component {
-  render() {
-    return (
-      <StyledNav shadow={ this.props.shadow }>
-        { this.props.links.map((el, idx) =>
-          <span key={idx}>
+const Breadcrumbs = (props) => (
+  <StyledNav { ...props }>
+    { props.links.map((el, idx) =>
+      <span key={idx}>
             <Link href={el.href}>
               {!!el.icon && <i className={el.icon}></i>}
               {!!el.text && <span>{el.text}</span> }
             </Link>
           </span>
-        )}
-      </StyledNav>
-    )
-  }
-}
+    )}
+  </StyledNav>
+);
 
 Breadcrumbs.propTypes = {
-  links: PropTypes.array,
+  links: PropTypes.arrayOf(PropTypes.object),
   shadow: PropTypes.bool
 };
 

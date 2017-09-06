@@ -24,7 +24,7 @@ stories
         </StoryItem>
         <StoryItem title="With shadow">
           <Breadcrumbs
-            shadow={true}
+            withShadow
             links={[
               {"href" : "https://10clouds.com", "icon": "fa fa-home"},
               {"href" : "https://10clouds.com", "text" : "Second page"},
@@ -43,7 +43,7 @@ stories
               ]}
           />
           <Breadcrumbs
-            shadow={true}
+            withShadow
             links={[
               {"href" : "https://10clouds.com", "icon": "fa fa-home"},
               {"href" : "https://10clouds.com", "text" : "Second page"}
@@ -58,7 +58,7 @@ stories
               ]}
           />
           <Breadcrumbs
-            shadow={true}
+            withShadow
             links={[
               {"href" : "https://10clouds.com", "text": "Main page"},
               {"href" : "https://10clouds.com", "text" : "Second page"}
@@ -75,7 +75,7 @@ stories
               ]}
           />
           <Breadcrumbs
-            shadow={true}
+            withShadow
             links={[
               {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
               {"href" : "https://10clouds.com", "text" : "Second page"}
@@ -93,7 +93,7 @@ stories
               ]}
           />
           <Breadcrumbs
-            shadow={true}
+            withShadow
             links={[
               {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
               {"href" : "https://10clouds.com", "text" : "Second page", "icon": "fa fa-binoculars"},
