@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 import { palette, style } from '../palette';
 
-const backgroundColorProvider = p => p.theme === 'primary' ? 'white' : p.theme === 'secondary' ? palette.GRAY.light : 'transparent';
-const foregroundColorProvider = p => p.theme === 'primary' ? palette.GRAY.light : p.theme === 'secondary' ? 'white' : palette.GRAY.light;
+const backgroundColorProvider = p => p.theme === 'primary' ? palette.GRAY.white : p.theme === 'secondary' ? palette.GRAY.light : 'transparent';
+const foregroundColorProvider = p => p.theme === 'primary' ? palette.GRAY.light : p.theme === 'secondary' ? palette.GRAY.white : palette.GRAY.light;
 
 const StyledPlaceholder = styled.div`
   width: 260px;

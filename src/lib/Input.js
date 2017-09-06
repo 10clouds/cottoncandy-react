@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   height: 24px;
   border-radius: 2px;
   background-color: ${style.BACKGROUND.main};
-  border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px #ff3131`};
+  border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px ${palette.RED.base}`};
 `;
 
 const StyledTitle = styled.span`
@@ -34,7 +34,7 @@ const StyledTitle = styled.span`
 const StyledSubtitle = styled.span`
   display: block;
   font-size: 13px;
-  color: #c2c8d0;
+  color: ${palette.GRAY.midDark};
   padding-bottom: 4px;
 `;
 

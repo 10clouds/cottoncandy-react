@@ -21,7 +21,7 @@ const StyledRadio = styled.div`
       position: relative;
 
       &:before {
-        background: white;
+        background: ${palette.GRAY.white};
         border: ${props => props.shadow ? 'none' : style.BORDER.input};
         border-radius: 50%;
         box-shadow: ${props => props.shadow ? style.SHADOW.main : 'none'};

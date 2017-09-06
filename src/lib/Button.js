@@ -8,8 +8,8 @@ const StyledButton = styled.button`
   border: ${p => p.theme === 'ternary' ? 'none' : style.BORDER.button};
   box-shadow: ${p => p.theme === 'ternary' ? style.SHADOW.button : 'none'};
   border-radius: ${p => p.rounded ? '38px' : '5px' };
-  background: ${p => p.theme === 'primary' ? style.BACKGROUND.gradient : 'white'};
-  color: ${p => p.theme === 'primary' ? 'white' : palette.TYPOGRAPHY.button};
+  background: ${p => p.theme === 'primary' ? style.BACKGROUND.gradient : palette.GRAY.white};
+  color: ${p => p.theme === 'primary' ? palette.GRAY.white : palette.TYPOGRAPHY.button};
   cursor: pointer;
   font-size: 16px;
   padding: ${p =>

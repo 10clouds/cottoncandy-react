@@ -21,7 +21,7 @@ const StyledCheckbox = styled.div`
       position: relative;
 
       &:before {
-        background: white;
+        background: ${palette.GRAY.white};
         border: ${props => props.shadow ? 'none' : style.BORDER.input};
         border-radius: 2px;
         box-shadow: ${props => props.shadow ? style.SHADOW.main : 'none'};
@@ -35,9 +35,9 @@ const StyledCheckbox = styled.div`
       }
 
       &:after {
-        background: ${props => props.shadow ? 'white' : style.BACKGROUND.gradient};
+        background: ${props => props.shadow ? palette.GRAY.white : style.BACKGROUND.gradient};
         border-radius: 2px;
-        color: ${props => props.shadow ? palette.TYPOGRAPHY.check : 'white'};
+        color: ${props => props.shadow ? palette.TYPOGRAPHY.check : palette.GRAY.white};
         font-family: 'system-ui';
         font-size: 20px;
         height: 32px;

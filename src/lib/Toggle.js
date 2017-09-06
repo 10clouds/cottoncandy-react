@@ -55,7 +55,7 @@ const StyledToogle = styled.div`
     border-radius: 18px;
     transition: opacity .2s ease-out;
     box-shadow: ${p => p.theme === 'primary' ? 'none' : style.SHADOW.toggle};
-    background-color: white;
+    background-color: ${palette.GRAY.white};
 
     &:before,
     &:after {
