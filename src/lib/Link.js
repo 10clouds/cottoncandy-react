@@ -21,7 +21,7 @@ const Link = (props) => (
 );
 
 Link.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.any,
 };
 
 export default Link;
