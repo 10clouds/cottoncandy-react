@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import { palette } from '../palette';
+import { palette } from '../constants';
 
 export const StyledSpinner = styled.div`
   width: ${props => props.small ? '35px' : '75px'};

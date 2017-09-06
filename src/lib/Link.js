@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const StyledLink = styled.a`
   color: ${palette.TYPOGRAPHY.main};

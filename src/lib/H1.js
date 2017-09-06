@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const StyledH1 = styled.h1`
   color: ${palette.TYPOGRAPHY.heading};

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { palette } from '../palette';
+import { palette } from '../constants';
 
 export const InlineLabel = styled.label`
   color: ${palette.TYPOGRAPHY.main};

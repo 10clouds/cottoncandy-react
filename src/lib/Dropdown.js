@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 import { noop } from './utils';
 
 const StyledWrapper = styled.div`

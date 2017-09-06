@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { noop } from './utils';
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const StyledCheckbox = styled.div`
   display: inline-block;

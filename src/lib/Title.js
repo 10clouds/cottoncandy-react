@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { palette } from '../palette';
+import { palette } from '../constants';
 
 export const Title = styled.h1`
   color: ${palette.TYPOGRAPHY.heading};

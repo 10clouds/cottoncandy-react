@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 // Loosely based on:
 // https://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/

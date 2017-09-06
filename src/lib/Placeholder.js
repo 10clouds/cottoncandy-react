@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const backgroundColorProvider = p => p.theme === 'primary' ? palette.GRAY.white : p.theme === 'secondary' ? palette.GRAY.light : 'transparent';
 const foregroundColorProvider = p => p.theme === 'primary' ? palette.GRAY.light : p.theme === 'secondary' ? palette.GRAY.white : palette.GRAY.light;

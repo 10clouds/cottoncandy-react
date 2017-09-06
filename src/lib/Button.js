@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const StyledButton = styled.button`
   border: ${p => p.theme === 'ternary' ? 'none' : style.BORDER.button};

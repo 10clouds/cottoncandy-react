@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { palette } from '../palette';
+import { palette } from '../constants';
 
 export const NavLink = styled.a`
   color: ${palette.TYPOGRAPHY.main};

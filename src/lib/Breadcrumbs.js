@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import Link from './Link';
 
-import { palette, style } from '../palette';
+import { palette, style } from '../constants';
 
 const StyledNav = styled.nav`
   font-family: ${style.FONT.main};
