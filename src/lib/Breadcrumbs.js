@@ -77,7 +77,7 @@ const StyledNav = styled.nav`
 const Breadcrumbs = (props) => (
   <StyledNav { ...props }>
     { props.links.map((el, idx) =>
-      <span key={idx}>
+      <span key={el.text + idx}>
             <Link href={el.href}>
               {!!el.icon && <i className={el.icon}></i>}
               {!!el.text && <span>{el.text}</span> }
