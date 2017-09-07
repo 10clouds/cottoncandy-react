@@ -67,10 +67,16 @@ const StyledToogle = styled.div`
 
     &:before {
       left: 8px;
+      top: 6px;
+      
+      @supports (-ms-ime-align:auto) {
+        top: 4px;
+      }
     }
 
     &:after {
       right: 8px;
+      top: 6px;
     }
   }
 
@@ -85,7 +91,7 @@ const StyledToogle = styled.div`
   }
 `;
 
-class Toogle extends Component {
+class Toggle extends Component {
   static propTypes = {
     theme: PropTypes.oneOf(['primary', 'secondary']),
     onChange: PropTypes.func,
@@ -134,4 +140,4 @@ class Toogle extends Component {
   }
 }
 
-export default Toogle;
+export default Toggle;
