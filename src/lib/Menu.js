@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { palette, style } from '../constants';
@@ -19,7 +19,7 @@ const NavItem = styled.li`
   & > ul {
     display: none;
     position: absolute;
-    box-shadow: ${palette.MENU_BOX_SHADOW};
+    box-shadow: ${style.SHADOW.menu};
     background: #fff;
     margin-left: -20px;
     margin-top: 16px;
@@ -33,14 +33,14 @@ const SubbedNavItem = NavItem.extend`
     content: ' ';
     height: 6px;
     width: 6px;
-    border-top: 2px solid ${palette.MAIN_TXT_COLOR};
-    border-right: 2px solid ${palette.MAIN_TXT_COLOR};
+    border-top: 2px solid ${palette.TYPOGRAPHY.main};
+    border-right: 2px solid ${palette.TYPOGRAPHY.main};
     position: relative;
     top: 5px;
     left: 5px;
     float: right;
     transform: scale(0.70) rotate(45deg);
-    transition: ${palette.TRANSITION};
+    transition: ${style.TRANSITION.main};
     transition-property: transform, opacity;
   }
   
@@ -49,7 +49,7 @@ const SubbedNavItem = NavItem.extend`
   }
 
   :hover {
-    box-shadow: ${palette.MENU_BOX_SHADOW};
+    box-shadow: ${style.SHADOW.menu};
     position: relative;
     
     :before {

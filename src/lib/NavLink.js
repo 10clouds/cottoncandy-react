@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { palette } from '../constants';
+import { palette, style } from '../constants';
 
 export const NavLink = styled.a`
   color: ${palette.TYPOGRAPHY.main};
@@ -11,12 +11,12 @@ export const NavLink = styled.a`
   display: inline-block;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
-  transition: ${palette.TRANSITION.main};
+  transition: ${style.TRANSITION.main};
   transition-property: border-color, color;
 
   &:hover,
   &.active {
-    color: ${palette.LINK_HOVER_COLOR};
-    border-color: ${palette.LINK_HOVER_COLOR};
+    color: ${palette.PRIMARY.base};
+    border-color: ${palette.PRIMARY.base};
   }
 `;
