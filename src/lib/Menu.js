@@ -91,47 +91,39 @@ const Nav = styled.header`
   padding: 0px 40px;
 `;
 
-class Submenu extends Component {
-  render() {
-    return (
-      <NavMenu>
-        { this.props.links.map((item, index) =>
-          <SubNavItem key={item.name + index}>
-            <NavLink href={item.link}>
-              {item.name}
-            </NavLink>
-          </SubNavItem>
-        )}
-      </NavMenu>
-    )
-  }
-}
+const Submenu = (props) => (
+  <NavMenu {...props}>
+    { props.links.map((item, index) =>
+      <SubNavItem key={item.name + index}>
+        <NavLink href={item.link}>
+          {item.name}
+        </NavLink>
+      </SubNavItem>
+    )}
+  </NavMenu>
+);
 
-export class Menu extends Component {
-  render() {
-    return (
-      <Nav>
-        <NavMenu>
-          {this.props.links.map((item, index) =>
-            item.submenu ? (
-                <SubbedNavItem key={item.name + index}>
-                  <NavLink href={item.link}>
-                    {item.name}
-                  </NavLink>
-                  <Submenu links={item.submenu} />
-                </SubbedNavItem>
-              ) : (
-                <NavItem key={item.name + index}>
-                  <NavLink href={item.link}>
-                    {item.name}
-                  </NavLink>
-                </NavItem>
-              )
-          )}
-        </NavMenu>
-      </Nav>
-    );
-  }
-}
+const Menu = (props) => (
+  <Nav {...props}>
+    <NavMenu>
+      {props.links.map((item, index) =>
+        item.submenu ? (
+            <SubbedNavItem key={item.name + index}>
+              <NavLink href={item.link}>
+                {item.name}
+              </NavLink>
+              <Submenu links={item.submenu} />
+            </SubbedNavItem>
+          ) : (
+            <NavItem key={item.name + index}>
+              <NavLink href={item.link}>
+                {item.name}
+              </NavLink>
+            </NavItem>
+          )
+      )}
+    </NavMenu>
+  </Nav>
+);
 
 export default Menu;
