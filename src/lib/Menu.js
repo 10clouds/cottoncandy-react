@@ -26,53 +26,53 @@ const NavItem = styled.li`
     padding: 10px 0;
     white-space: nowrap;
   }
+`;
+
+const SubbedNavItem = NavItem.extend`
+  :before {
+    content: ' ';
+    height: 6px;
+    width: 6px;
+    border-top: 2px solid ${palette.MAIN_TXT_COLOR};
+    border-right: 2px solid ${palette.MAIN_TXT_COLOR};
+    position: relative;
+    top: 5px;
+    left: 5px;
+    float: right;
+    transform: scale(0.70) rotate(45deg);
+    transition: ${palette.TRANSITION};
+    transition-property: transform, opacity;
+  }
   
-  &.with_submenu{
+  > a {
+    transition-property: border-color, color, opacity;
+  }
+
+  :hover {
+    box-shadow: ${palette.MENU_BOX_SHADOW};
+    position: relative;
+    
     :before {
-      content: ' ';
-      height: 6px;
-      width: 6px;
-      border-top: 2px solid ${palette.MAIN_TXT_COLOR};
-      border-right: 2px solid ${palette.MAIN_TXT_COLOR};
-      position: relative;
-      top: 5px;
-      left: 5px;
-      float: right;
-      transform: scale(0.70) rotate(45deg);
-      transition: ${palette.TRANSITION};
-      transition-property: transform, opacity;
+      opacity: 0.5;
+      transform: scale(0.70) rotate(135deg);
     }
     
     > a {
-      transition-property: border-color, color, opacity;
+      opacity: 0.5;
     }
-
-    :hover {
-      box-shadow: ${palette.MENU_BOX_SHADOW};
-      position: relative;
-      
-      :before {
-        opacity: 0.5;
-        transform: scale(0.70) rotate(135deg);
-      }
-      
-      > a {
-        opacity: 0.5;
-      }
-      
-      :after {
-        content: ' ';
-        display: block;
-        background: #ffffff;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        height: 20px;
-      }
     
-      & > ul {
-        display: block;
-      }
+    :after {
+      content: ' ';
+      display: block;
+      background: #ffffff;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 20px;
+    }
+  
+    & > ul {
+      display: block;
     }
   }
 `;
@@ -96,7 +96,7 @@ class Submenu extends Component {
     return (
       <NavMenu>
         { this.props.links.map((item, index) =>
-          <SubNavItem key={index}>
+          <SubNavItem key={item.name + index}>
             <NavLink href={item.link}>
               {item.name}
             </NavLink>
@@ -112,13 +112,21 @@ export class Menu extends Component {
     return (
       <Nav>
         <NavMenu>
-          { this.props.links.map((item, index) =>
-            <NavItem key={item.name + index} className={item.submenu ? 'with_submenu' : ''}>
-              <NavLink href={ item.link }>
-                { item.name }
-              </NavLink>
-              {item.submenu && <Submenu links={item.submenu} />}
-            </NavItem>
+          {this.props.links.map((item, index) =>
+            item.submenu ? (
+                <SubbedNavItem key={item.name + index}>
+                  <NavLink href={item.link}>
+                    {item.name}
+                  </NavLink>
+                  <Submenu links={item.submenu} />
+                </SubbedNavItem>
+              ) : (
+                <NavItem key={item.name + index}>
+                  <NavLink href={item.link}>
+                    {item.name}
+                  </NavLink>
+                </NavItem>
+              )
           )}
         </NavMenu>
       </Nav>
