@@ -10,7 +10,7 @@ const StyledInputGroup = styled.div`
   > * {
     margin: 10px 18px;
   }
-`
+`;
 
 class InputGroup extends Component {
   render() {
@@ -20,6 +20,6 @@ class InputGroup extends Component {
   }
 }
 
-InputGroup.propTypes = {}
+InputGroup.propTypes = {};
 
 export default InputGroup;

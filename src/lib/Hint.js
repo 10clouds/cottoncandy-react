@@ -12,12 +12,12 @@ const StyledHint = styled.span`
   text-align: left;
 `;
 
-const Button = (props) => (
+const Hint = (props) => (
   <StyledHint { ...props }/>
 );
 
-Button.propTypes = {
+Hint.propTypes = {
   children: PropTypes.string,
-}
+};
 
-export default Button;
+export default Hint;

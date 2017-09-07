@@ -48,7 +48,7 @@ const StyledSliderHandle = styled.div`
   position: absolute;
   background-image: linear-gradient(to bottom, #6f8aee, #4862e1);
   border-radius: 50%;
-`
+`;
 
 class RangeSlider extends Component {
   static propTypes = {
@@ -62,7 +62,7 @@ class RangeSlider extends Component {
     min: 0,
     max: 100,
     step: 1,
-  }
+  };
 
   state = {
     leftOffset: 0,
@@ -87,7 +87,7 @@ class RangeSlider extends Component {
 
   onMouseDown = (e) => {
     e.preventDefault();
-    this.grabPosition = e.clientX - (this.sliderElement.getBoundingClientRect().x + this.thumbElement.offsetLeft);
+    this.grabPosition = e.clientX - (this.sliderElement.getBoundingClientRect().left + this.thumbElement.offsetLeft);
     document.addEventListener('mousemove', this.onMouseMove)
     document.addEventListener('mouseup', this.onMouseUp)
   };
@@ -143,7 +143,7 @@ class RangeSlider extends Component {
   }
 
   getLeftOffset(pointerPosition, maxPosition) {
-    const newPosition = Math.round(pointerPosition - this.sliderElement.getBoundingClientRect().x - this.grabPosition);
+    const newPosition = Math.round(pointerPosition - this.sliderElement.getBoundingClientRect().left - this.grabPosition);
     const leftOffset = Math.max(0, Math.min(newPosition, maxPosition));
     return leftOffset;
   }
@@ -179,6 +179,6 @@ class RangeSlider extends Component {
       </StyledContainer>
     );
   }
-};
+}
 
 export default RangeSlider;

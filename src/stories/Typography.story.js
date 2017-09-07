@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import H1 from '../lib/H1';
 import H2 from '../lib/H2';

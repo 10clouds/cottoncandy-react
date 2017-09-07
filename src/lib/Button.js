@@ -33,12 +33,12 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'big']),
   rounded: PropTypes.bool,
   onClick: PropTypes.func,
-}
+};
 
 Button.defaultProps = {
   theme: 'primary',
   size: 'medium',
   rounded: false,
-}
+};
 
 export default Button;

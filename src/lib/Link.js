@@ -16,12 +16,12 @@ const StyledLink = styled.a`
   }
 `;
 
-const Button = (props) => (
+const Link = (props) => (
   <StyledLink { ...props }/>
 );
 
-Button.propTypes = {
-  children: PropTypes.string,
-}
+Link.propTypes = {
+  children: PropTypes.any,
+};
 
-export default Button;
+export default Link;

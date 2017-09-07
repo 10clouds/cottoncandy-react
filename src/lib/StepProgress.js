@@ -89,6 +89,6 @@ class StepProgress extends Component {
       </div>
     );
   }
-};
+}
 
 export default StepProgress;

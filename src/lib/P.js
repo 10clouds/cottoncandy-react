@@ -12,12 +12,12 @@ const StyledP = styled.p`
   text-align: left;
 `;
 
-const Button = (props) => (
+const P = (props) => (
   <StyledP { ...props }/>
 );
 
-Button.propTypes = {
+P.propTypes = {
   children: PropTypes.string,
-}
+};
 
-export default Button;
+export default P;

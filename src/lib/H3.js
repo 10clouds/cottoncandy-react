@@ -12,12 +12,12 @@ const StyledH3 = styled.h3`
   text-align: left;
 `;
 
-const Button = (props) => (
+const H3 = (props) => (
   <StyledH3 { ...props }/>
 );
 
-Button.propTypes = {
+H3.propTypes = {
   children: PropTypes.string,
-}
+};
 
-export default Button;
+export default H3;
