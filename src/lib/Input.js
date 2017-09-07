@@ -34,7 +34,7 @@ const StyledTitle = styled.span`
 const StyledSubtitle = styled.span`
   display: block;
   font-size: 13px;
-  color: ${palette.GRAY.midDark};
+  color: ${palette.GRAY.base};
   padding-bottom: 4px;
 `;
 

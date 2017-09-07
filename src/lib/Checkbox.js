@@ -22,7 +22,7 @@ const StyledCheckbox = styled.div`
 
       &:before {
         background: ${palette.GRAY.white};
-        border: ${props => props.shadow ? 'none' : style.BORDER.input};
+        border: ${props => props.shadow ? 'none' : style.BORDER.alt};
         border-radius: 2px;
         box-shadow: ${props => props.shadow ? style.SHADOW.main : 'none'};
         content: '';

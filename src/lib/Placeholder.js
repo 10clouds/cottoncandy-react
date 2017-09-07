@@ -51,7 +51,7 @@ const StyledPlaceholder = styled.div`
   p {
     color: ${foregroundColorProvider};
     padding: 0em;
-    box-shadow: ${style.SHADOW.placeholder};
+    box-shadow: ${style.SHADOW.white};
     background-color: ${style.BACKGROUND.main};
     background-color: ${foregroundColorProvider};
     line-height: 1.8em;

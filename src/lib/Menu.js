@@ -19,7 +19,7 @@ const NavItem = styled.li`
   & > ul {
     display: none;
     position: absolute;
-    box-shadow: ${style.SHADOW.menu};
+    box-shadow: ${style.SHADOW.big};
     background: #fff;
     margin-left: -20px;
     margin-top: 16px;
@@ -49,7 +49,7 @@ const SubbedNavItem = NavItem.extend`
   }
 
   :hover {
-    box-shadow: ${style.SHADOW.menu};
+    box-shadow: ${style.SHADOW.big};
     position: relative;
     
     :before {
@@ -86,7 +86,7 @@ const SubNavItem = styled.li`
 
 const Nav = styled.header`
   background-color: ${style.BACKGROUND.main};
-  box-shadow: ${style.SHADOW.menu};
+  box-shadow: ${style.SHADOW.big};
   border-radius: 5px;
   padding: 0px 40px;
 `;

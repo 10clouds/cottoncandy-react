@@ -25,7 +25,7 @@ const GRAY = {
   white: '#ffffff',
   light: '#f0f2f5',
   midLight: '#d6d6d6',
-  midDark: '#c2c8d0',
+  base: '#c2c8d0',
   dark: '#757575',
   black: '#000000',
 };
@@ -45,10 +45,10 @@ const FONT = {
 
 const SHADOW = {
   main: `0 0 15px 0 ${SECONDARY.base}`,
-  menu: `0 0 25px 0 ${SECONDARY.base}`,
-  button: '0 0 12px 0px rgba(124, 124, 124, 0.5)',
-  toggle: `0 0 15px 0 ${GRAY.midLight}`,
-  placeholder: '0.2em 0 0 rgba(255,255,255,0.7), -0.2em 0 0 rgba(255,255,255,0.7)',
+  big: `0 0 25px 0 ${SECONDARY.base}`,
+  dark: `0 0 15px 0 ${GRAY.midLight}`,
+  light: '0 0 12px 0px rgba(124, 124, 124, 0.5)',
+  white: '0.2em 0 0 rgba(255,255,255,0.7), -0.2em 0 0 rgba(255,255,255,0.7)',
 };
 
 const BACKGROUND = {
@@ -61,8 +61,8 @@ const TRANSITION = {
 };
 
 const BORDER = {
-  button: `1px solid ${PRIMARY.base}`,
-  input: `1px solid ${SECONDARY.midDark}`,
+  main: `1px solid ${PRIMARY.base}`,
+  alt: `1px solid ${SECONDARY.midDark}`,
 };
 
 export const style = {
