@@ -9,7 +9,7 @@ const StyledButton = styled.button`
   box-shadow: ${p => p.theme === 'ternary' ? style.SHADOW.light : 'none'};
   border-radius: ${p => p.rounded ? '38px' : '5px' };
   background: ${p => p.theme === 'primary' ? style.BACKGROUND.gradient : palette.GRAY.white};
-  color: ${p => p.theme === 'primary' ? palette.GRAY.white : palette.TYPOGRAPHY.button};
+  color: ${p => p.theme === 'primary' ? palette.GRAY.white : palette.PRIMARY.base};
   cursor: pointer;
   font-size: 16px;
   padding: ${p =>
