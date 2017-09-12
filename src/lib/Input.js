@@ -22,6 +22,11 @@ const StyledInput = styled.input`
   border-radius: 2px;
   background-color: ${style.BACKGROUND.main};
   border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px ${palette.RED.base}`};
+
+  :focus {
+    outline: 0;
+    box-shadow: ${style.SHADOW.outline};
+  }
 `;
 
 const StyledTitle = styled.span`
