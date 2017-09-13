@@ -3,12 +3,19 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
-const GRAY_COLOR = '#f0f2f5';
+const backgroundColorProvider = p => p.theme === 'primary'
+  ? palette.GRAY.white
+  : p.theme === 'secondary'
+    ? palette.GRAY.light
+    : 'transparent';
 
-const backgroundColorProvider = p => p.theme === 'primary' ? 'white' : p.theme === 'secondary' ? GRAY_COLOR : 'transparent';
-const foregroundColorProvider = p => p.theme === 'primary' ? GRAY_COLOR : p.theme === 'secondary' ? 'white' : GRAY_COLOR;
+const foregroundColorProvider = p => p.theme === 'primary'
+  ? palette.GRAY.light
+  : p.theme === 'secondary'
+    ? palette.GRAY.white
+    : palette.GRAY.light;
 
 const StyledPlaceholder = styled.div`
   width: 260px;
@@ -53,8 +60,8 @@ const StyledPlaceholder = styled.div`
   p {
     color: ${foregroundColorProvider};
     padding: 0em;
-    box-shadow: 0.2em 0 0 rgba(255,255,255,0.7), -0.2em 0 0 rgba(255,255,255,0.7);
-    background-color: #fff;
+    box-shadow: ${style.SHADOW.white};
+    background-color: ${style.BACKGROUND.main};
     background-color: ${foregroundColorProvider};
     line-height: 1.8em;
     font-size: 0.65em;
@@ -121,7 +128,7 @@ class Placeholder extends Component {
       ...(this.state.paragraphWithImage ? {
         display: 'flex',
       }: {})
-    }
+    };
 
     return (
       <StyledPlaceholder

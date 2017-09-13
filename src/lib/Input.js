@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { noop } from './utils';
-import * as palette from '../palette';
+import {palette, style} from '../constants';
 
 const StyledLabel = styled.label`
   width: 100%;
@@ -20,21 +20,26 @@ const StyledInput = styled.input`
   width: 100%;
   height: 24px;
   border-radius: 2px;
-  background-color: white;
-  border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px #ff3131`};
+  background-color: ${style.BACKGROUND.main};
+  border: ${p => p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px ${palette.RED.base}`};
+
+  :focus {
+    outline: 0;
+    box-shadow: ${style.SHADOW.outline};
+  }
 `;
 
 const StyledTitle = styled.span`
   display: block;
   font-size: 16px;
   line-height: 1.38;
-  color: #202020;
+  color: ${palette.TYPOGRAPHY.heading};
 `;
 
 const StyledSubtitle = styled.span`
   display: block;
   font-size: 13px;
-  color: #c2c8d0;
+  color: ${palette.GRAY.base};
   padding-bottom: 4px;
 `;
 
@@ -43,7 +48,7 @@ const StyledValidationMessage = styled.span`
   font-size: 13px;
   line-height: 1.4;
   height: 1.4em;
-  color: #ff3131;
+  color: ${palette.RED.base};
 `;
 
 class Input extends Component {

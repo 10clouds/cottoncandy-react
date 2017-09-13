@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -24,7 +24,7 @@ const StyledSlider = styled.div`
   display: block;
   height: 4px;
   border-radius: 6px;
-  background-color: #ebeff5;
+  background-color: ${palette.SECONDARY.light};
   outline: none;
   padding: 0;
   margin: 0;
@@ -34,7 +34,7 @@ const StyledSliderFill = styled.div`
   position: absolute;
   top: 0;
   height: 100%;
-  background-image: linear-gradient(to bottom, #6f8aee, #4862e1);
+  background-image: ${style.BACKGROUND.gradient};
   border-radius: 10px;
 `;
 
@@ -46,7 +46,7 @@ const StyledSliderHandle = styled.div`
   width: 16px;
   height: 16px;
   position: absolute;
-  background-image: linear-gradient(to bottom, #6f8aee, #4862e1);
+  background-image: ${style.BACKGROUND.gradient};
   border-radius: 50%;
 `;
 

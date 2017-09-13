@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
 const StyledStep = styled.div`
   background-color: ${palette.SECONDARY.light};
@@ -14,7 +14,7 @@ const StyledStep = styled.div`
   position: relative;
 
   &:before {
-    background: white;
+    background: ${palette.GRAY.white};
     border-radius: 50%;
     box-shadow: 0 0 15px 0 ${palette.SECONDARY.base};
     content: '';
@@ -29,7 +29,7 @@ const StyledStep = styled.div`
   }
 
   &:after {
-    background: ${p => p.active ? `linear-gradient(to bottom, ${palette.PRIMARY.light}, ${palette.PRIMARY.dark})` : '#ebeff5'};
+    background: ${p => p.active ? style.BACKGROUND.gradient : palette.SECONDARY.light};
     border-radius: 50%;
     content: '';
     height: 16px;
@@ -56,7 +56,7 @@ const StyledLabel = styled.span`
 `;
 
 const StyledFill = styled.span`
-  background-image: linear-gradient(to bottom, ${palette.PRIMARY.light}, ${palette.PRIMARY.dark});
+  background-image: ${style.BACKGROUND.gradient};
   display: block;
   height: 4px;
   left: 0;

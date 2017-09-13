@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
 const StyledToogle = styled.div`
   width: 50px;
@@ -44,7 +44,7 @@ const StyledToogle = styled.div`
   }
 
   label {
-    color: ${palette.MAIN_TXT_COLOR};
+    color: ${palette.TYPOGRAPHY.main};
     cursor: pointer;
     height: 100%;
     width: 100%;
@@ -54,8 +54,8 @@ const StyledToogle = styled.div`
     border: ${p => p.theme === 'primary' ? `solid 1px ${palette.PRIMARY.base}` : 'none'};
     border-radius: 18px;
     transition: opacity .2s ease-out;
-    box-shadow: ${p => p.theme === 'primary' ? 'none' : '0 0 15px 0 #d6d6d6'};
-    background-color: white;
+    box-shadow: ${p => p.theme === 'primary' ? 'none' : style.SHADOW.dark};
+    background-color: ${palette.GRAY.white};
 
     &:before,
     &:after {

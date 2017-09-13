@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../constants';
 
 export const StyledSpinner = styled.div`
   width: ${props => props.small ? '35px' : '75px'};
   height: ${props => props.small ? '35px' : '75px'};
-  border: 2px solid ${palette.PROGRESSBAR_STRIP};
-  border-top: 3px solid white;
+  border: 2px solid ${palette.PRIMARY.base};
+  border-top: 3px solid ${palette.GRAY.white};
   border-radius: 100%;
   margin: 30px auto;
   animation: spinner 1s infinite linear;

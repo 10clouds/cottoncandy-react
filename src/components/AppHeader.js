@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette } from '../constants';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -19,10 +19,10 @@ const StyledLogo = styled.div`
 
 const Title = styled.h1`
   align-self: flex-start;
-  color: ${palette.TEXT_COLOR};
+  color: ${palette.TYPOGRAPHY.heading};
   font-weight: 300;
   font-size: 50px;
-`
+`;
 
 const AppHeader = (props) => (
   <StyledHeader { ...props }>

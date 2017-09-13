@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import Link from './Link';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
 const StyledNav = styled.nav`
-  font-family: ${palette.FONT.main};
+  font-family: ${style.FONT.main};
 
   height: ${p => p.withShadow ? '45px' : 'auto'};
   border-radius: ${p => p.withShadow ? '5px' : 'none'};
-  box-shadow: ${p => p.withShadow ? palette.SHADOW : 'none'};
+  box-shadow: ${p => p.withShadow ? style.SHADOW.main : 'none'};
   
   line-height: ${p => p.withShadow ? '45px' : 'normal'};
   vertical-align: middle;
@@ -47,7 +47,7 @@ const StyledNav = styled.nav`
     
     :last-child {
       a {
-        color: ${palette.LINK_HOVER_COLOR};
+        color: ${palette.PRIMARY.base};
         opacity: 1;
       }
     }
@@ -59,8 +59,8 @@ const StyledNav = styled.nav`
       transform: scale(0.70) rotate(45deg);
       z-index: 1;
       background: transparent;
-      border-top: 2px solid ${p => p.withShadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
-      border-right: 2px solid ${p => p.withShadow ? palette.SHADOW_COLOR : palette.MAIN_TXT_COLOR};
+      border-top: 2px solid ${p => p.withShadow ? palette.SECONDARY.base : palette.TYPOGRAPHY.main};
+      border-right: 2px solid ${p => p.withShadow ? palette.SECONDARY.base : palette.TYPOGRAPHY.main};
 
       top: ${p => p.withShadow ? '-1px' : '7px'};
       right: ${p => p.withShadow ? '-23px' : '-5px'};

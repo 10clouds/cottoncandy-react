@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 
 export const NavLink = styled.a`
-  color: ${palette.MAIN_TXT_COLOR};
+  color: ${palette.TYPOGRAPHY.main};
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
@@ -11,12 +11,12 @@ export const NavLink = styled.a`
   display: inline-block;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
-  transition: ${palette.TRANSITION};
+  transition: ${style.TRANSITION.main};
   transition-property: border-color, color;
 
   &:hover,
   &.active {
-    color: ${palette.LINK_HOVER_COLOR};
-    border-color: ${palette.LINK_HOVER_COLOR};
+    color: ${palette.PRIMARY.base};
+    border-color: ${palette.PRIMARY.base};
   }
 `;

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { palette } from '../palette';
+import { palette, style } from '../constants';
 
 // Loosely based on:
 // https://tympanus.net/codrops/2014/04/09/how-to-create-a-circular-progress-button/
@@ -32,14 +32,14 @@ class SVGElement {
 }
 
 const StyledProgress = styled.div`
-  background: #ebeef4;
+  background: ${palette.SECONDARY.light};
   margin: 10px auto 30px;
   width: 250px;
   height: 3px;
 
   &:after {
     content: '';
-    background: linear-gradient(to bottom, ${palette.PRIMARY.light}, ${palette.PRIMARY.dark});
+    background: ${style.BACKGROUND.gradient};
     display: block;
     height: 3px;
     width: 100%;

@@ -2,15 +2,15 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import * as palette from '../palette';
+import { palette, style } from '../constants';
 import { noop } from './utils';
 
 const StyledWrapper = styled.div`
-  background-color: white;
+  background-color: ${palette.GRAY.white};
   background: white;
   border-radius: 2px;
   border: ${p => p.focused ? `solid 1px ${palette.PRIMARY.base}` : p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px ${palette.RED.base}`};
-  color: black;
+  color: ${palette.GRAY.black};
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
   width: 100%;
 
   &:after {
-    border-color: ${p => p.active ? 'black transparent' : 'transparent black'};
+    border-color: ${p => p.active ? `${palette.GRAY.black} transparent` : `transparent ${palette.GRAY.black}`};
     border-style: solid;
     border-width: ${p => p.active ? '6px 6px 0 6px ' : '6px 0 6px 6px'};
     content: "";
@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
 const StyledButton = styled.button`
   background: none;
   border: none;
-  color: ${p => p.isPlaceholder ? '#757575' : 'black' };
+  color: ${p => p.isPlaceholder ? palette.GRAY.dark : palette.GRAY.black };
   cursor: pointer;
   display: block;
   font-size: 20px;
@@ -52,11 +52,11 @@ const StyledButton = styled.button`
 `;
 
 const StyledDropdown = styled.ul`
-  background-color: #ffffff;
-  background: #fff;
+  background-color: ${style.BACKGROUND.main};
+  background: ${style.BACKGROUND.main};
   border-radius: 5px;
-  box-shadow: 0 0 ${p => p.shadowLevel * 8}px 0 #ebebeb;
-  color: black;
+  box-shadow: 0 0 ${p => p.shadowLevel * 8}px 0 ${palette.SECONDARY.base};
+  color: ${palette.GRAY.black};
   font-weight: normal;
   left: 0;
   margin: 0;
@@ -73,7 +73,7 @@ const StyledDropdown = styled.ul`
 const OptionButton = styled.button`
   background: none;
   border: none;
-  color: black;
+  color: ${palette.GRAY.black};
   cursor: pointer;
   display: block;
   display: block;
@@ -85,7 +85,7 @@ const OptionButton = styled.button`
   width: 100%;
 
   &:hover, &:focus {
-    background: #EEE;
+    background: ${palette.SECONDARY.light};
     outline: none;
   }
 `;
