@@ -15,7 +15,11 @@ stories
     <div>
       <Row title="Modal Window">
         <StoryItem>
-          <ModalWindow title="Some Window Title">
+          <ModalWindow
+            title="Some Window Title"
+            defaultVisible={true}
+            fixedPosition={false}
+          >
             Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada
             elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum
             commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla
@@ -34,11 +38,13 @@ stories
       <Row title="Playground">
         <StoryItem>
           <ModalWindow
+            defaultVisible={true}
             title={text('Title', 'Some Window Title')}
             width={text('Width', '50vw')}
             height={text('Height', '50vh')}
             withCloseButton={boolean('With close button', true)}
             onClose={action('close')}
+            fixedPosition={boolean('Fixed position', false)}
             >
             {text('Content',
               `Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada

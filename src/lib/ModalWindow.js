@@ -1,11 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { palette, style } from '../constants';
 
 const WindowDiv = styled.div`
-  position: relative;
+  position: ${(p) => p.fixedPosition ? 'fixed' : 'relative'};
+  top: ${(p) => p.fixedPosition ? `calc((100vh - ${p.height}) / 2)` : '0'};
+  left: ${(p) => p.fixedPosition ? `calc((100vw - ${p.width}) / 2)` : '0'};
   width: ${(p) => p.width};
   height: ${(p) => p.height};
   border-radius: 5px;
@@ -58,28 +60,96 @@ const WindowContent = styled.div`
   width: calc(100% - 64px);
 `;
 
-const ModalWindow = (props) => (
-  <WindowDiv width={props.width} height={props.height}>
-    {props.withCloseButton && <WindowCloseButton onClick={props.onClose} />}
-    {props.title && <WindowTitle>{props.title}</WindowTitle>}
-    <WindowContent hasTitle={!!props.title}>
-      {props.children}
-    </WindowContent>
-  </WindowDiv>
-);
+const Overlay = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
+class ModalWindow extends Component {
+  constructor(props) {
+    super();
+
+    this.state = {
+      visible: props.defaultVisible,
+    };
+
+    this.show = this.show.bind(this);
+    this.hide = this.hide.bind(this);
+    this.setVisible = this.setVisible.bind(this);
+    this.closeClicked = this.closeClicked.bind(this);
+  }
+
+  show() {
+    this.setVisible(true);
+  }
+
+  hide() {
+    this.setVisible(false);
+  }
+
+  setVisible(value) {
+    if (value) {
+      this.props.onShow && this.props.onShow();
+    } else {
+      this.props.onHide && this.props.onHide();
+    }
+
+    this.setState({
+      visible: value,
+    });
+  }
+
+  closeClicked() {
+    this.props.onCloseClicked && this.props.onCloseClicked();
+    this.hide();
+  }
+
+  render() {
+    const window = (
+      <WindowDiv
+        width={this.props.width}
+        height={this.props.height}
+        fixedPosition={this.props.fixedPosition}
+      >
+        {this.props.withCloseButton && <WindowCloseButton onClick={this.closeClicked}/>}
+        {this.props.title && <WindowTitle>{this.props.title}</WindowTitle>}
+        <WindowContent hasTitle={!!this.props.title}>
+          {this.props.children}
+        </WindowContent>
+      </WindowDiv>
+    );
+
+    return this.state.visible
+      ? this.props.fixedPosition
+        ? <Overlay>{window}</Overlay>
+        : window
+      : null;
+  }
+}
 
 ModalWindow.propTypes = {
   title: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   withCloseButton: PropTypes.bool,
-  onClose: PropTypes.func,
+  defaultVisible: PropTypes.bool,
+  fixedPosition: PropTypes.bool,
+
+  onShow: PropTypes.func,
+  onHide: PropTypes.func,
+  onCloseClicked: PropTypes.func,
 };
 
 ModalWindow.defaultProps = {
   width: '50vw',
   height: '50vh',
   withCloseButton: true,
+  defaultVisible: false,
+  fixedPosition: true,
 };
 
 export default ModalWindow;

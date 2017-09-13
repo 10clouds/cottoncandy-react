@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -18,37 +18,53 @@ const ButtonRow = styled.div`
   }
 `;
 
-const AlertWindow = (props) => {
-  const {buttons, info, ...rest} = props;
-  return (
-    <ModalWindow {...rest}>
-      <InfoText>{info}</InfoText>
-      <ButtonRow>
-        {buttons.map((button, idx) =>
-          <Button key={button.name + idx}
-                  rounded
-                  size="medium"
-                  onClick={button.onClick}
-                  theme={button.theme}>
-            {button.name}
-          </Button>
-        )}
-      </ButtonRow>
-    </ModalWindow>
-  );
-};
+class AlertWindow extends Component {
+  buttonClicked(button) {
+    let hide = true;
+    if (button.onClick) {
+      hide = button.onClick();
+    }
+    if (hide !== false) {
+      this.modal.hide();
+    }
+  }
+
+  render() {
+    const {buttons, info, ...rest} = this.props;
+    return (
+      <ModalWindow {...rest} ref={(modal) => this.modal = modal}>
+        {info && <InfoText>{info}</InfoText>}
+        <ButtonRow>
+          {buttons.map((button, idx) =>
+            <Button key={button.name + idx}
+                    rounded
+                    size="medium"
+                    onClick={this.buttonClicked.bind(this, button)}
+                    theme={button.theme}>
+              {button.name}
+            </Button>
+          )}
+        </ButtonRow>
+      </ModalWindow>
+    );
+  }
+}
 
 AlertWindow.propTypes = {
   height: PropTypes.string,
   width: PropTypes.string,
   info: PropTypes.string,
-  buttons: PropTypes.arrayOf(PropTypes.object),
+  buttons: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    theme: PropTypes.oneOf(['primary', 'secondary', 'ternary']),
+    onClick: PropTypes.func,
+  })),
 };
 
 AlertWindow.defaultProps = {
   height: '240px',
   width: '530px',
-  buttons: [{name: 'OK'}]
+  buttons: [{name: 'OK'}],
 };
 
 export default AlertWindow;
