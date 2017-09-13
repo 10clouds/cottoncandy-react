@@ -23,7 +23,11 @@ const AlertWindow = (props) => (
     <InfoText>{props.info}</InfoText>
     <ButtonRow>
       {props.buttons.map((button, idx) =>
-        <Button key={button.name + idx} rounded size="medium" onClick={button.onClick} theme={button.theme}>
+        <Button key={button.name + idx}
+                rounded
+                size="medium"
+                onClick={button.onClick}
+                theme={button.theme}>
           {button.name}
         </Button>
       )}

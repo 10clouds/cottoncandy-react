@@ -9,9 +9,9 @@ const WindowDiv = styled.div`
   width: ${(p) => p.width};
   height: ${(p) => p.height};
   border-radius: 5px;
-	background-color: ${style.BACKGROUND.main};
-	box-shadow: ${style.SHADOW.big};
-	padding: 0;
+  background-color: ${style.BACKGROUND.main};
+  box-shadow: ${style.SHADOW.big};
+  padding: 0;
 `;
 
 const WindowCloseButton = styled.span`
@@ -42,12 +42,12 @@ const WindowTitle = styled.h2`
 `;
 
 const WindowContent = styled.div`
-	padding: 32px;
-	height: 32px;
-	overflow: auto;
-	position: absolute;
-	height: calc(100% - ${(p) => p.hasTitle ? '128px' : '64px'});
-	width: calc(100% - 64px);
+  padding: 32px;
+  height: 32px;
+  overflow: auto;
+  position: absolute;
+  height: calc(100% - ${(p) => p.hasTitle ? '128px' : '64px'});
+  width: calc(100% - 64px);
 `;
 
 const ModalWindow = (props) => (

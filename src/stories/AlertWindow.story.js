@@ -20,9 +20,9 @@ stories
             info="You have unsaved changes. Would you like to save them?"
             width="600px"
             buttons={[
-              {name: 'Yes'},
-              {name: 'No', theme: 'secondary'},
-              {name: 'Cancel', theme: 'secondary'}
+                {name: 'Yes'},
+                {name: 'No', theme: 'secondary'},
+                {name: 'Cancel', theme: 'secondary'}
               ]}
           />
         </StoryItem>
