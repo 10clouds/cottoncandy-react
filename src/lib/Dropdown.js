@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
   width: 100%;
 
   &:after {
-    border-color: ${p => p.active ? palette.GRAY.black + ' transparent' : 'transparent ' + palette.GRAY.black};
+    border-color: ${p => p.active ? `${palette.GRAY.black} transparent` : `transparent ${palette.GRAY.black}`};
     border-style: solid;
     border-width: ${p => p.active ? '6px 6px 0 6px ' : '6px 0 6px 6px'};
     content: "";

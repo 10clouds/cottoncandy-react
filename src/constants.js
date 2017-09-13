@@ -49,6 +49,7 @@ const SHADOW = {
   dark: `0 0 15px 0 ${GRAY.midLight}`,
   light: '0 0 12px 0px rgba(124, 124, 124, 0.5)',
   white: '0.2em 0 0 rgba(255,255,255,0.7), -0.2em 0 0 rgba(255,255,255,0.7)',
+  outline: `0 0 3pt 2pt ${PRIMARY.light}`,
 };
 
 const BACKGROUND = {
