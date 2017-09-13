@@ -14,21 +14,29 @@ const WindowDiv = styled.div`
   padding: 0;
 `;
 
-const WindowCloseButton = styled.span`
+const WindowCloseButton = styled.button`
+  position: absolute;
   overflow: hidden;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  color: ${palette.SECONDARY.midDark};
+  padding: 0;
+  border: none;
+  background: ${style.BACKGROUND.main};
+  
   :after {
-    position: absolute;
-    z-index: 10;
-    cursor: pointer;
-    display: block;
-    top: 22px;
-    right: 22px;
     content: '×';
-    width: 16px;
-    height: 16px;
-    font-size: 30px;
-    line-height: 12px;
-    color: ${palette.SECONDARY.midDark};
+    position: relative;
+    top: -10px;
+    font-size: 32px;
+  }
+  
+  :focus {
+    outline: 0;
+    text-shadow: 0 0 2pt ${palette.PRIMARY.light};
   }
 `;
 
