@@ -59,7 +59,7 @@ const WindowContent = styled.div`
 `;
 
 const ModalWindow = (props) => (
-  <WindowDiv {...props}>
+  <WindowDiv width={props.width} height={props.height}>
     {props.withCloseButton && <WindowCloseButton onClick={props.onClose} />}
     {props.title && <WindowTitle>{props.title}</WindowTitle>}
     <WindowContent hasTitle={!!props.title}>

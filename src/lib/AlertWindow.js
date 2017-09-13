@@ -18,27 +18,29 @@ const ButtonRow = styled.div`
   }
 `;
 
-const AlertWindow = (props) => (
-  <ModalWindow {...props}>
-    <InfoText>{props.info}</InfoText>
-    <ButtonRow>
-      {props.buttons.map((button, idx) =>
-        <Button key={button.name + idx}
-                rounded
-                size="medium"
-                onClick={button.onClick}
-                theme={button.theme}>
-          {button.name}
-        </Button>
-      )}
-    </ButtonRow>
-  </ModalWindow>
-);
+const AlertWindow = (props) => {
+  const {buttons, info, ...rest} = props;
+  return (
+    <ModalWindow {...rest}>
+      <InfoText>{info}</InfoText>
+      <ButtonRow>
+        {buttons.map((button, idx) =>
+          <Button key={button.name + idx}
+                  rounded
+                  size="medium"
+                  onClick={button.onClick}
+                  theme={button.theme}>
+            {button.name}
+          </Button>
+        )}
+      </ButtonRow>
+    </ModalWindow>
+  );
+};
 
 AlertWindow.propTypes = {
   height: PropTypes.string,
   width: PropTypes.string,
-  title: PropTypes.string,
   info: PropTypes.string,
   buttons: PropTypes.arrayOf(PropTypes.object),
 };
