@@ -22,10 +22,7 @@ const SelectWrapper = styled.div`
 `;
 
 const StyledSelect = styled.select`
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
-  
   background: ${style.BACKGROUND.main};
   border: solid 1px ${(p) => p.valid ? palette.SECONDARY.base : palette.RED.base};
   border-radius: 2px;
