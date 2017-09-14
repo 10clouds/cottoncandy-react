@@ -75,7 +75,7 @@ const StyledNav = styled.nav`
 `;
 
 const Breadcrumbs = (props) => (
-  <StyledNav { ...props }>
+  <StyledNav withShadow={props.withShadow}>
     { props.links.map((el, idx) =>
       <span key={el.text + idx}>
             <Link href={el.href}>
@@ -88,13 +88,17 @@ const Breadcrumbs = (props) => (
 );
 
 Breadcrumbs.propTypes = {
-  links: PropTypes.arrayOf(PropTypes.object),
-  shadow: PropTypes.bool
+  links: PropTypes.arrayOf(PropTypes.shape({
+    icon: PropTypes.string,
+    text: PropTypes.string,
+    href: PropTypes.string.isRequired,
+  })),
+  withShadow: PropTypes.bool,
 };
 
 Breadcrumbs.defaultProps = {
-  shadow: false,
-  links: []
+  links: [],
+  withShadow: false,
 };
 
 export default Breadcrumbs;

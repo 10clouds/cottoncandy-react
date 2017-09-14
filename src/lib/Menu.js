@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { palette, style } from '../constants';
 import { NavLink } from './NavLink';
@@ -92,7 +93,7 @@ const Nav = styled.header`
 `;
 
 const Submenu = (props) => (
-  <NavMenu {...props}>
+  <NavMenu>
     { props.links.map((item, index) =>
       <SubNavItem key={item.name + index}>
         <NavLink href={item.link}>
@@ -104,7 +105,7 @@ const Submenu = (props) => (
 );
 
 const Menu = (props) => (
-  <Nav {...props}>
+  <Nav>
     <NavMenu>
       {props.links.map((item, index) =>
         item.submenu ? (
@@ -125,5 +126,16 @@ const Menu = (props) => (
     </NavMenu>
   </Nav>
 );
+
+Menu.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    submenu: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    })),
+  })).isRequired,
+};
 
 export default Menu;
