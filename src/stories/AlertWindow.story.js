@@ -54,8 +54,8 @@ stories
                 return {
                     name: btn.name,
                     theme: btn.theme,
-                    onClick: ()=> {
-                      action('Button clicked: ' + btn.name);
+                    onClick: () => {
+                      action(`Button clicked: ${btn.name}`);
                       return btn.result;
                     },
                   };

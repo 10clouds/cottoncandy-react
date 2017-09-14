@@ -36,11 +36,12 @@ class AlertWindow extends Component {
         {info && <InfoText>{info}</InfoText>}
         <ButtonRow>
           {buttons.map((button, idx) =>
-            <Button key={button.name + idx}
-                    rounded
-                    size="medium"
-                    onClick={this.buttonClicked.bind(this, button)}
-                    theme={button.theme}>
+            <Button
+              key={button.name + idx}
+              rounded
+              size="medium"
+              onClick={this.buttonClicked.bind(this, button)}
+              theme={button.theme}>
               {button.name}
             </Button>
           )}
