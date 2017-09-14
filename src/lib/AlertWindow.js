@@ -19,7 +19,7 @@ const ButtonRow = styled.div`
 `;
 
 class AlertWindow extends Component {
-  buttonClicked(button) {
+  onButtonClick = (button) => () => {
     let hide = true;
     if (button.onClick) {
       hide = button.onClick();
@@ -27,7 +27,7 @@ class AlertWindow extends Component {
     if (hide !== false) {
       this.modal.hide();
     }
-  }
+  };
 
   render() {
     const {buttons, info, ...rest} = this.props;
@@ -40,7 +40,7 @@ class AlertWindow extends Component {
               key={button.name + idx}
               rounded
               size="medium"
-              onClick={this.buttonClicked.bind(this, button)}
+              onClick={this.onButtonClick(button)}
               theme={button.theme}>
               {button.name}
             </Button>

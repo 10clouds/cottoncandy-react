@@ -44,11 +44,11 @@ stories
               JSON.parse(
                 text(
                   'Buttons',
-                  `[
-  {"name": "Yes"},
-  {"name": "No", "theme": "secondary", "result": false},
-  {"name": "Cancel", "theme": "secondary"}
-]`
+                  JSON.stringify([
+                    {name: 'Yes'},
+                    {name: 'No', theme: 'secondary', result: false},
+                    {name: 'Cancel', theme: 'secondary'},
+                  ], null, 2)
                 )
               ).map((btn) => {
                 return {

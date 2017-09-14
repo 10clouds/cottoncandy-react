@@ -70,28 +70,19 @@ const Overlay = styled.div`
 `;
 
 class ModalWindow extends Component {
-  constructor(props) {
-    super();
+  state = {
+    visible: this.props.defaultVisible,
+  };
 
-    this.state = {
-      visible: props.defaultVisible,
-    };
-
-    this.show = this.show.bind(this);
-    this.hide = this.hide.bind(this);
-    this.setVisible = this.setVisible.bind(this);
-    this.closeClicked = this.closeClicked.bind(this);
-  }
-
-  show() {
+  show = () => {
     this.setVisible(true);
-  }
+  };
 
-  hide() {
+  hide = () => {
     this.setVisible(false);
-  }
+  };
 
-  setVisible(value) {
+  setVisible = (value) => {
     if (value) {
       this.props.onShow && this.props.onShow();
     } else {
@@ -101,12 +92,12 @@ class ModalWindow extends Component {
     this.setState({
       visible: value,
     });
-  }
+  };
 
-  closeClicked() {
+  closeClicked = () => {
     this.props.onCloseClicked && this.props.onCloseClicked();
     this.hide();
-  }
+  };
 
   render() {
     const window = (
