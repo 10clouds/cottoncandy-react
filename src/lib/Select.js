@@ -9,7 +9,7 @@ const SelectWrapper = styled.div`
   &:after {
     border-color: ${palette.GRAY.black} transparent;
     border-style: solid;
-    border-width: 6px 6px 0 6px;
+    border-width: 6px 6px 0;
     content: "";
     height: 0;
     margin-top: -3px;
