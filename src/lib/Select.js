@@ -55,19 +55,25 @@ export const Option = styled.option`
 `;
 
 
-const Select = (props) => (
-  <SelectWrapper>
-    <StyledSelect {...props} required={!!props.placeholder}>
-      {props.placeholder && (
-        <PlaceholderOption disabled hidden value="">{props.placeholder}</PlaceholderOption>
-      )}
-      {props.options && props.options.map((opt, idx) => (
-        <Option key={opt + idx} value={opt}>{opt}</Option>
-      ))}
-      {props.children}
-    </StyledSelect>
-  </SelectWrapper>
-);
+const Select = (props) => {
+  const {placeholder, options, children, ...rest} = props;
+  if (placeholder && rest.defaultValue === undefined) {
+    rest.defaultValue = '';
+  }
+  return (
+    <SelectWrapper>
+      <StyledSelect {...rest} required={!!placeholder}>
+        {placeholder && (
+          <PlaceholderOption disabled hidden value="">{placeholder}</PlaceholderOption>
+        )}
+        {options && options.map((opt, idx) => (
+          <Option key={opt + idx} value={opt}>{opt}</Option>
+        ))}
+        {children}
+      </StyledSelect>
+    </SelectWrapper>
+  );
+};
 
 Select.defaultProps = {
   valid: true,
@@ -76,6 +82,8 @@ Select.defaultProps = {
 Select.propTypes = {
   placeholder: PropTypes.string,
   children: PropTypes.arrayOf(PropTypes.object),
+  options: PropTypes.arrayOf(PropTypes.string),
+  valid: PropTypes.bool,
 };
 
 export default Select;
