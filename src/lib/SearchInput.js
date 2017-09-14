@@ -4,23 +4,6 @@ import styled from 'styled-components';
 
 import {palette, style} from '../constants';
 
-
-const searchIcon = `<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <g fill="${encodeURI(palette.TYPOGRAPHY.main)}">
-    <path d="M15.5608163,13.5026804 L11.3436735,9.24206186 C11.3436735,9.24206186 11.3436735,9.24206186
-      11.2440816,9.24206186 C11.7453061,8.22762887 12.0473469,7.21319588 12.0473469,6.09814433
-      C12.0473469,2.75134021 9.33714286,0.0131958763 6.0244898,0.0131958763 C2.71183673,0.0131958763
-      0,2.75134021 0,6.09814433 C0,9.44494845 2.71020408,12.1830928 6.02285714,12.1830928 C7.12653061,12.1830928
-      8.23183673,11.8795876 9.13469388,11.2709278 L9.13469388,11.2709278 L13.3502041,15.5298969
-      C13.9526531,16.1385567 14.8555102,16.1385567 15.4579592,15.5298969 C16.1616327,15.0235052
-      16.1616327,14.1113402 15.5608163,13.5026804 Z M2.00816327,6.09814433 C2.00816327,3.86639175
-      3.8155102,2.04206186 6.02285714,2.04206186 C8.23183673,2.04206186 10.037551,3.86804124 10.037551,6.09814433
-      C10.037551,8.32989691 8.23020408,10.1558763 6.02285714,10.1558763 C3.8155102,10.1558763
-      2.00816327,8.32989691 2.00816327,6.09814433 Z" id="Shape"></path>
-  </g>
-</svg>
-`;
-
 const StyledInput = styled.input`
   border: none;
   border-bottom: 1px solid ${palette.SECONDARY.base};
@@ -46,9 +29,10 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
   position: absolute;
-  right: 0;
+  right: ${(p) => p.expandable ? '9px' : '0'};
+  top: ${(p) => p.expandable ? '9px' : '0'};
   border: none;
-  border-bottom: 1px solid ${palette.SECONDARY.base};
+  border-bottom: ${(p) => p.expandable ? 'none' : `1px solid ${palette.SECONDARY.base}`};
   box-sizing: border-box;
   height: 32px;
   width: 32px;
@@ -81,7 +65,7 @@ const ShadowBox = styled.div`
 
 const ExpandableStyledInput = styled.input`
   color: ${palette.TYPOGRAPHY.main};
-  background-color: ${style.BACKGROUND.main};
+  background: ${style.BACKGROUND.main};
   border-radius: 40px;
   border: solid 1px ${palette.SECONDARY.midDark};
   box-sizing: border-box;
@@ -93,11 +77,6 @@ const ExpandableStyledInput = styled.input`
   font-size: 13px;
   cursor: pointer;
   
-  background-image: url('data:image/svg+xml;utf8,${searchIcon}');
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: center center;
-
   &:focus, &:not(:placeholder-shown) {
     background-position: calc(100% - 16px) center;
     width: 255px;
@@ -113,6 +92,10 @@ const ExpandableStyledInput = styled.input`
     box-shadow: ${style.SHADOW.outline};
   }
   
+  &:not(:focus):placeholder-shown + button {
+    pointer-events: none;
+  }
+  
   ::placeholder {
     color: ${palette.SECONDARY.dark};
     transition: ${style.TRANSITION.main};
@@ -121,18 +104,34 @@ const ExpandableStyledInput = styled.input`
   }
 `;
 
+const SearchIcon = () => (
+  <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g fill="${encodeURI(palette.TYPOGRAPHY.main)}">
+      <path d="M15.5608163,13.5026804 L11.3436735,9.24206186 C11.3436735,9.24206186 11.3436735,9.24206186
+        11.2440816,9.24206186 C11.7453061,8.22762887 12.0473469,7.21319588 12.0473469,6.09814433
+        C12.0473469,2.75134021 9.33714286,0.0131958763 6.0244898,0.0131958763 C2.71183673,0.0131958763
+        0,2.75134021 0,6.09814433 C0,9.44494845 2.71020408,12.1830928 6.02285714,12.1830928 C7.12653061,12.1830928
+        8.23183673,11.8795876 9.13469388,11.2709278 L9.13469388,11.2709278 L13.3502041,15.5298969
+        C13.9526531,16.1385567 14.8555102,16.1385567 15.4579592,15.5298969 C16.1616327,15.0235052
+        16.1616327,14.1113402 15.5608163,13.5026804 Z M2.00816327,6.09814433 C2.00816327,3.86639175
+        3.8155102,2.04206186 6.02285714,2.04206186 C8.23183673,2.04206186 10.037551,3.86804124 10.037551,6.09814433
+        C10.037551,8.32989691 8.23020408,10.1558763 6.02285714,10.1558763 C3.8155102,10.1558763
+        2.00816327,8.32989691 2.00816327,6.09814433 Z" />
+    </g>
+  </svg>
+);
+
 const SearchInput = (props) => {
   const{expandable, onClick, ...rest} = props;
   return (
-    expandable ? (
-      <ExpandableStyledInput {...rest} />
-    ) : (
-      <Container>
-        <StyledInput {...rest} />
-        <StyledButton onClick={onClick} dangerouslySetInnerHTML={{__html: searchIcon}} />
-        <ShadowBox/>
-      </Container>
-    )
+    <Container>
+      {!expandable && <StyledInput {...rest} />}
+      {expandable && <ExpandableStyledInput {...rest} />}
+      <StyledButton expandable={expandable} onClick={onClick}>
+        <SearchIcon/>
+      </StyledButton>
+      {!expandable && <ShadowBox/>}
+    </Container>
   );
 };
 
