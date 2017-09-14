@@ -58,16 +58,19 @@ const ExpandableStyledInput = styled.input`
   background-repeat: no-repeat;
   background-position: center center;
 
-  :focus {
+  &:focus, &:not(:placeholder-shown) {
     background-position: calc(100% - 16px) center;
-    outline: 0;
-    box-shadow: ${style.SHADOW.outline};
     width: 255px;
     cursor: auto;
 
     ::placeholder {
       opacity: 1;
     }
+  }
+  
+  &:focus {
+    outline: 0;
+    box-shadow: ${style.SHADOW.outline};
   }
   
   ::placeholder {
@@ -97,6 +100,7 @@ const SearchInput = (props) =>
 
 SearchInput.propTypes = {
   expandable: PropTypes.bool,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default SearchInput;
