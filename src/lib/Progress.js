@@ -36,7 +36,7 @@ const StyledProgress = styled.div`
   width: 250px;
   height: 3px;
 
-  &:after {
+  &::after {
     content: '';
     background: ${style.BACKGROUND.gradient};
     display: block;
@@ -44,7 +44,7 @@ const StyledProgress = styled.div`
     width: 100%;
     transform: scaleX(${p => p.value});
     transform-origin: left;
-    transition: transform .3s ease-out;
+    transition: transform 0.3s ease-out;
   }
 `;
 
@@ -54,14 +54,13 @@ const Path = styled.path`
   opacity: 1;
   transition: stroke-dashoffset 0.5s;
   fill: transparent;
-}
 `;
 
 const CircleContainer = styled.div`
   position: relative;
   margin: 1rem;
 
-  &:after {
+  &::after {
     color: ${palette.PRIMARY.dark};
     content: '${p => p.value * 100}%';
     display: ${p => p.showLabel ? 'block' : 'none'};
@@ -71,10 +70,9 @@ const CircleContainer = styled.div`
     position: absolute;
     right: 0;
     text-align: center;
-    top: calc(50% - .7em);
+    top: calc(50% - 0.7em);
     width: 100%;
   }
-}
 `;
 
 class Progress extends Component {

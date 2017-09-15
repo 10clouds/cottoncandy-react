@@ -16,7 +16,7 @@ const NavItem = styled.li`
   display: inline-block;
   padding: 16px 20px ${(p) => (!p.hasSubMenu && p.hoverLine === 'bottom') ? '0px' : '24px'};
   margin-top: 8px;
-  
+
   & > ul {
     display: none;
     position: absolute;
@@ -43,11 +43,11 @@ const SubbedNavItem = NavItem.extend`
     top: 5px;
     left: 12px;
     float: right;
-    transform: scale(0.70) rotate(45deg);
+    transform: scale(0.7) rotate(45deg);
     transition: ${style.TRANSITION.main};
     transition-property: transform, opacity;
   }
-  
+
   > a {
     transition-property: border-color, color, opacity;
   }
@@ -55,26 +55,26 @@ const SubbedNavItem = NavItem.extend`
   :hover {
     box-shadow: ${style.SHADOW.big};
     position: relative;
-    
-    :before {
+
+    ::before {
       opacity: 0.5;
-      transform: scale(0.70) rotate(135deg);
+      transform: scale(0.7) rotate(135deg);
     }
-    
+
     > a {
       opacity: 0.5;
     }
-    
-    :after {
+
+    ::after {
       content: ' ';
       display: block;
-      background: #ffffff;
+      background: ${style.BACKGROUND.main};
       position: absolute;
       width: 100%;
       left: 0;
       height: 20px;
     }
-  
+
     & > ul {
       display: block;
     }
@@ -85,7 +85,7 @@ const SubNavItem = styled.li`
   display: block;
   padding: 8px 20px;
   box-shadow: none;
-  whitespace: nowrap;
+  white-space: nowrap;
 `;
 
 const Nav = styled.header`
@@ -93,7 +93,7 @@ const Nav = styled.header`
   background-color: ${style.BACKGROUND.main};
   box-shadow: ${style.SHADOW.big};
   border-radius: 5px;
-  padding: 0px 40px;
+  padding: 0 40px;
 `;
 
 const MenuNavLink = NavLink.extend`

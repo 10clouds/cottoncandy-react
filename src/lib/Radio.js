@@ -20,7 +20,7 @@ const StyledRadio = styled.div`
       padding-left: 46px;
       position: relative;
 
-      &:before {
+      &::before {
         background: ${palette.GRAY.white};
         border: ${props => props.shadow ? 'none' : style.BORDER.alt};
         border-radius: 50%;
@@ -34,7 +34,7 @@ const StyledRadio = styled.div`
         width: 30px;
       }
 
-      &:after {
+      &::after {
         background: ${style.BACKGROUND.gradient};
         border-radius: 100%;
         content: '';
@@ -50,10 +50,10 @@ const StyledRadio = styled.div`
     }
 
     &:checked + label {
-  		&:after {
+      &::after {
         opacity: 1;
         transform: scale(1);
-  		}
+      }
     }
   }
 `;

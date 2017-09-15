@@ -28,14 +28,14 @@ const WindowCloseButton = styled.button`
   padding: 0;
   border: none;
   background: ${style.BACKGROUND.main};
-  
-  :after {
+
+  ::after {
     content: '×';
     position: relative;
     top: -10px;
     font-size: 32px;
   }
-  
+
   :focus {
     outline: 0;
     text-shadow: 0 0 2pt ${palette.PRIMARY.light};
@@ -47,13 +47,12 @@ const WindowTitle = styled.h2`
   font-family: ${style.FONT.heading};
   font-size: 22px;
   text-align: center;
-  margin: 32px 0 0 0;
+  margin: 32px 0 0;
   padding: 0 32px;
 `;
 
 const WindowContent = styled.div`
   padding: 32px;
-  height: 32px;
   overflow: auto;
   position: absolute;
   height: calc(100% - ${(p) => p.hasTitle ? '128px' : '64px'});

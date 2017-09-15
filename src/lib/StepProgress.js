@@ -13,7 +13,7 @@ const StyledStep = styled.div`
   padding: 0 4rem;
   position: relative;
 
-  &:before {
+  &::before {
     background: ${palette.GRAY.white};
     border-radius: 50%;
     box-shadow: 0 0 15px 0 ${palette.SECONDARY.base};
@@ -28,7 +28,7 @@ const StyledStep = styled.div`
     z-index: 2;
   }
 
-  &:after {
+  &::after {
     background: ${p => p.active ? style.BACKGROUND.gradient : palette.SECONDARY.light};
     border-radius: 50%;
     content: '';
@@ -49,7 +49,7 @@ const StyledLabel = styled.span`
   color: ${ p => p.active ? palette.PRIMARY.midDark : palette.SECONDARY.dark };
   display: inline-block;
   left: 0;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   position: absolute;
   right: 0;
   text-align: center;

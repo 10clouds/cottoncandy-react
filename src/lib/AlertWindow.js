@@ -12,7 +12,7 @@ const InfoText = styled.div`
 const ButtonRow = styled.div`
   text-align: center;
   margin-top: 32px;
-  
+
   button {
     margin: 0 16px;
   }

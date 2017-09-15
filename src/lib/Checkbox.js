@@ -20,7 +20,7 @@ const StyledCheckbox = styled.div`
       padding-left: 46px;
       position: relative;
 
-      &:before {
+      &::before {
         background: ${palette.GRAY.white};
         border: ${props => props.shadow ? 'none' : style.BORDER.alt};
         border-radius: 2px;
@@ -34,7 +34,7 @@ const StyledCheckbox = styled.div`
         width: 30px;
       }
 
-      &:after {
+      &::after {
         background: ${props => props.shadow ? palette.GRAY.white : style.BACKGROUND.gradient};
         border-radius: 2px;
         color: ${props => props.shadow ? palette.TYPOGRAPHY.check : palette.GRAY.white};
@@ -53,7 +53,7 @@ const StyledCheckbox = styled.div`
     }
 
     &:checked + label {
-      &:after {
+      &::after {
         content: '✓';
         opacity: 1;
       }
