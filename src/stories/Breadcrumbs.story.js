@@ -16,20 +16,20 @@ stories
         <StoryItem title="Default">
           <Breadcrumbs
             links={[
-              {"href" : "https://10clouds.com", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"},
-              {"href" : "https://10clouds.com", "text" : "Third page"}
-              ]}
+              {href: 'https://10clouds.com', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'},
+              {href: 'https://10clouds.com', text: 'Third page'}
+            ]}
           />
         </StoryItem>
         <StoryItem title="With shadow">
           <Breadcrumbs
             withShadow
             links={[
-              {"href" : "https://10clouds.com", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"},
-              {"href" : "https://10clouds.com", "text" : "Third page"}
-              ]}
+              {href: 'https://10clouds.com', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'},
+              {href: 'https://10clouds.com', text: 'Third page'}
+            ]}
           />
         </StoryItem>
       </Row>
@@ -38,31 +38,31 @@ stories
         <StoryItem title="As icon">
           <Breadcrumbs
             links={[
-              {"href" : "https://10clouds.com", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
           <Breadcrumbs
             withShadow
             links={[
-              {"href" : "https://10clouds.com", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
         </StoryItem>
         <StoryItem title="As text">
           <Breadcrumbs
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
           <Breadcrumbs
             withShadow
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
         </StoryItem>
       </Row>
@@ -70,16 +70,16 @@ stories
         <StoryItem title="Icon and text">
           <Breadcrumbs
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
           <Breadcrumbs
             withShadow
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page'}
+            ]}
           />
         </StoryItem>
       </Row>
@@ -87,18 +87,18 @@ stories
         <StoryItem title="Icon and text on all crumbs">
           <Breadcrumbs
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page", "icon": "fa fa-binoculars"},
-              {"href" : "https://10clouds.com", "text" : "Third page", "icon": "fa fa-cutlery"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page", "icon": "fa fa-binoculars'},
+              {href: 'https://10clouds.com', text: 'Third page", "icon": "fa fa-cutlery'}
+            ]}
           />
           <Breadcrumbs
             withShadow
             links={[
-              {"href" : "https://10clouds.com", "text": "Main page", "icon": "fa fa-home"},
-              {"href" : "https://10clouds.com", "text" : "Second page", "icon": "fa fa-binoculars"},
-              {"href" : "https://10clouds.com", "text" : "Third page", "icon": "fa fa-cutlery"}
-              ]}
+              {href: 'https://10clouds.com', text: 'Main page', icon: 'fa fa-home'},
+              {href: 'https://10clouds.com', text: 'Second page", "icon": "fa fa-binoculars'},
+              {href: 'https://10clouds.com', text: 'Third page", "icon": "fa fa-cutlery'}
+            ]}
           />
         </StoryItem>
       </Row>

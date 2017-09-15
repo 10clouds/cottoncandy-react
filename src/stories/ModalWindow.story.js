@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import { Row, StoryItem } from './utils.js';
 
-import ModalWindow from "../lib/ModalWindow";
+import ModalWindow from '../lib/ModalWindow';
 
 const stories = storiesOf('Core', module);
 

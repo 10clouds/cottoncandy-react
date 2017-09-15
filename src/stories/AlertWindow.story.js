@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import { Row, StoryItem } from './utils.js';
 
-import AlertWindow from "../lib/AlertWindow";
+import AlertWindow from '../lib/AlertWindow';
 
 const stories = storiesOf('Core', module);
 
@@ -22,10 +22,10 @@ stories
             info="You have unsaved changes. Would you like to save them?"
             width="600px"
             buttons={[
-                {name: 'Yes'},
-                {name: 'No', theme: 'secondary'},
-                {name: 'Cancel', theme: 'secondary'}
-              ]}
+              {name: 'Yes'},
+              {name: 'No', theme: 'secondary'},
+              {name: 'Cancel', theme: 'secondary'}
+            ]}
           />
         </StoryItem>
       </Row>
@@ -52,13 +52,13 @@ stories
                 )
               ).map((btn) => {
                 return {
-                    name: btn.name,
-                    theme: btn.theme,
-                    onClick: () => {
-                      action(`Button clicked: ${btn.name}`);
-                      return btn.result;
-                    },
-                  };
+                  name: btn.name,
+                  theme: btn.theme,
+                  onClick: () => {
+                    action(`Button clicked: ${btn.name}`);
+                    return btn.result;
+                  },
+                };
               })
             }
           />
