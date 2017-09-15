@@ -40,6 +40,9 @@
     "@storybook/addon-knobs": "^3.1.9",
     "@storybook/react": "^3.1.9",
     "@storybook/storybook-deployer": "^2.0.0",
+    "babel-eslint": "7",
+    "eslint": "3.x",
+    "eslint-plugin-react": "^7.3.0",
     "prop-types": "^15.5.10",
     "react-scripts": "^1.0.10",
     "why-did-you-update": "0.0.8"
