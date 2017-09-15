@@ -7,7 +7,7 @@ import { Row, StoryItem } from './utils.js';
 
 import AlertWindow from '../lib/AlertWindow';
 
-const stories = storiesOf('Core', module);
+const stories = storiesOf('Core', module); // eslint-disable-line no-undef
 
 stories
   .addDecorator(withKnobs)

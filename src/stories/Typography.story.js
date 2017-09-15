@@ -10,7 +10,7 @@ import Hint from '../lib/Hint';
 import Link from '../lib/Link';
 import { Row, StoryItem } from './utils.js';
 
-const stories = storiesOf('Core', module);
+const stories = storiesOf('Core', module); // eslint-disable-line no-undef
 
 stories
   .addDecorator(withKnobs)

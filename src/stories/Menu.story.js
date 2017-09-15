@@ -6,7 +6,7 @@ import { Row, StoryItem } from './utils.js';
 
 import Menu from '../lib/Menu';
 
-const stories = storiesOf('Core', module);
+const stories = storiesOf('Core', module); // eslint-disable-line no-undef
 
 stories
   .addDecorator(withKnobs)

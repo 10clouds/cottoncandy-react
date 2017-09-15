@@ -6,7 +6,7 @@ import Spinner from '../lib/Spinner';
 import Progress from '../lib/Progress';
 import { Row, StoryItem } from './utils.js';
 
-const stories = storiesOf('Core', module);
+const stories = storiesOf('Core', module); // eslint-disable-line no-undef
 
 stories
   .addDecorator(withKnobs)
