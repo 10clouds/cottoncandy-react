@@ -24,6 +24,7 @@ stories
         <StoryItem>
           <SearchInput
             expandable={boolean('Expandable', false)}
+            defaultExpanded={boolean('Default expanded', false)}
             placeholder={text('Placeholder', 'Search...')}
           />
         </StoryItem>
