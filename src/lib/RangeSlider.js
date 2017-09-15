@@ -88,14 +88,14 @@ class RangeSlider extends Component {
   onMouseDown = (e) => {
     e.preventDefault();
     this.grabPosition = e.clientX - (this.sliderElement.getBoundingClientRect().left + this.thumbElement.offsetLeft);
-    document.addEventListener('mousemove', this.onMouseMove)
-    document.addEventListener('mouseup', this.onMouseUp)
+    document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('mouseup', this.onMouseUp);
   };
 
   onMouseUp = (e) => {
     e.preventDefault();
-    document.removeEventListener('mousemove', this.onMouseMove)
-    document.removeEventListener('mouseup', this.onMouseUp)
+    document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('mouseup', this.onMouseUp);
   };
 
   onMouseMove = (e) => {
@@ -108,19 +108,18 @@ class RangeSlider extends Component {
 
   setBasedOnPosition(position) {
     const leftOffset = this.getLeftOffset(position, this.maxPosition);
-    const value = this.getScaledValue(leftOffset, this.maxPosition)
+    const value = this.getScaledValue(leftOffset, this.maxPosition);
     const steppedLeftOffset = (this.getValue(leftOffset, this.maxPosition) * this.maxPosition) / this.props.max;
 
     this.setState({
       leftOffset: steppedLeftOffset,
       value,
-    })
+    });
   }
 
   setBasedOnValue(value) {
     const maxPosition = this.maxPosition;
     const leftOffset = maxPosition * (value - this.props.min) / this.props.max;
-    const steppedLeftOffset = ((this.getValue(leftOffset, maxPosition) * maxPosition) / this.props.max);
 
     this.setState({
       leftOffset,

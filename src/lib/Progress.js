@@ -19,7 +19,6 @@ class SVGElement {
       this.pathsArr[i] = path;
       path.style.strokeDasharray = this.lengthsArr[i] = path.getTotalLength();
     } );
-    console.log('progress', progress)
     this.draw(progress);
   }
 
@@ -27,7 +26,7 @@ class SVGElement {
   draw(progress) {
     this.pathsArr.forEach((element, i) => {
       element.style.strokeDashoffset = this.lengthsArr[ i ] * ( 1 - progress );
-    })
+    });
   }
 }
 
@@ -124,7 +123,7 @@ class Progress extends Component {
           </svg>
         </CircleContainer>
       )
-    )
+    );
   }
 }
 

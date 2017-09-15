@@ -134,11 +134,11 @@ class Dropdown extends PureComponent {
   };
 
   hide = (e) => {
-    this.toggleActive(false)
+    this.toggleActive(false);
   };
 
   show = (e) => {
-    this.toggleActive(true)
+    this.toggleActive(true);
   };
 
   toggleActive = (active) => {

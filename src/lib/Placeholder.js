@@ -106,12 +106,12 @@ class Placeholder extends Component {
   };
 
   componentDidMount() {
-    this.checkIfWithImage()
+    this.checkIfWithImage();
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.children !== prevProps.children) {
-      this.checkIfWithImage()
+      this.checkIfWithImage();
     }
   }
 
@@ -134,7 +134,7 @@ class Placeholder extends Component {
       <StyledPlaceholder
         { ...this.props }
         style={ style }
-        ref={ component => { this.element = findDOMNode(component) } }
+        ref={ component => { this.element = findDOMNode(component); } }
       />
     );
   }

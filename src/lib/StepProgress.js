@@ -76,15 +76,15 @@ class StepProgress extends Component {
     return (
       <div>
         { this.props.steps.map(step => {
-            activeFound = activeFound || step === this.props.activeStep;
-            const markActive = !activeFound || step === this.props.activeStep;
-            return (
-              <StyledStep active={ markActive } key={ step }>
-                <StyledLabel active={ markActive }>{ step }</StyledLabel>
-                <StyledFill active={ !activeFound } half={ step === this.props.activeStep }></StyledFill>
-              </StyledStep>
-            );
-          })
+          activeFound = activeFound || step === this.props.activeStep;
+          const markActive = !activeFound || step === this.props.activeStep;
+          return (
+            <StyledStep active={ markActive } key={ step }>
+              <StyledLabel active={ markActive }>{ step }</StyledLabel>
+              <StyledFill active={ !activeFound } half={ step === this.props.activeStep }></StyledFill>
+            </StyledStep>
+          );
+        })
         }
       </div>
     );
