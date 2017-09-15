@@ -18,7 +18,9 @@ const TYPOGRAPHY = {
 };
 
 const RED = {
+  light: '#ff5757',
   base: '#ff3131',
+  dark: '#e13131',
 };
 
 const GRAY = {
@@ -54,7 +56,7 @@ const SHADOW = {
 const BACKGROUND = {
   main: GRAY.white,
   gradient: `linear-gradient(to bottom, ${PRIMARY.light}, ${PRIMARY.dark})`,
-  redGradient: 'linear-gradient(to bottom, #ff5757, #e13131)',
+  redGradient: `linear-gradient(to bottom, ${RED.light}, ${RED.dark})`,
 };
 
 const TRANSITION = {
