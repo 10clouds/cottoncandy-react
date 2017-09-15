@@ -62,6 +62,11 @@ const Select = (props) => {
   }
   return (
     <SelectWrapper>
+      {/**
+       * Dirty hack: we are using *required* property of select
+       * to change it's look when there is no value selected
+       * and we are showing a placeholder option.
+       */}
       <StyledSelect {...rest} required={!!placeholder}>
         {placeholder && (
           <PlaceholderOption disabled hidden value="">{placeholder}</PlaceholderOption>
