@@ -6,7 +6,8 @@ import { palette, style } from '../constants';
 
 const SelectWrapper = styled.div`
   position: relative;
-  &:after {
+
+  &::after {
     border-color: ${palette.GRAY.black} transparent;
     border-style: solid;
     border-width: 6px 6px 0;
@@ -39,7 +40,7 @@ const StyledSelect = styled.select`
     outline: 0;
     box-shadow: ${style.SHADOW.outline};
   }
-  
+
   :invalid {
     color: ${palette.GRAY.base};
   }
