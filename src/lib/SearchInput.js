@@ -71,11 +71,11 @@ const ExpandableStyledInput = styled.input`
   box-sizing: border-box;
   height: 50px;
   padding: 16px 20px;
-  width: ${(p) => p.defaultExpanded ? '255px' : '50px'};
+  width: ${(p) => p.expanded ? '255px' : '50px'};
   transition: ${style.TRANSITION.main};
   transition-property: width, background-position;
   font-size: 13px;
-  cursor: ${(p) => p.defaultExpanded ? 'auto' : 'pointer'};
+  cursor: ${(p) => p.expanded ? 'auto' : 'pointer'};
   
   &:focus, &:not(:placeholder-shown) {
     width: 255px;
@@ -99,7 +99,7 @@ const ExpandableStyledInput = styled.input`
     color: ${palette.SECONDARY.dark};
     transition: ${style.TRANSITION.main};
     transition-property: opacity;
-    opacity: ${(p) => p.defaultExpanded ? '1' : '0'};
+    opacity: ${(p) => p.expanded ? '1' : '0'};
   }
 `;
 
@@ -121,11 +121,11 @@ const SearchIcon = () => (
 );
 
 const SearchInput = (props) => {
-  const{expandable, defaultExpanded, onClick, ...rest} = props;
+  const{expandable, expanded, onClick, ...rest} = props;
   return (
     <Container>
       {!expandable && <StyledInput {...rest} />}
-      {expandable && <ExpandableStyledInput {...rest} defaultExpanded={defaultExpanded} />}
+      {expandable && <ExpandableStyledInput {...rest} expanded={expanded} />}
       <StyledButton expandable={expandable} onClick={onClick}>
         <SearchIcon/>
       </StyledButton>
@@ -137,7 +137,7 @@ const SearchInput = (props) => {
 SearchInput.propTypes = {
   expandable: PropTypes.bool,
   placeholder: PropTypes.string.isRequired,
-  defaultExpanded: PropTypes.bool,
+  expanded: PropTypes.bool,
 };
 
 export default SearchInput;
