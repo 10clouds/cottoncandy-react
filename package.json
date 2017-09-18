@@ -14,7 +14,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "lint": "stylelint 'src/lib/**.js' && eslint 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
