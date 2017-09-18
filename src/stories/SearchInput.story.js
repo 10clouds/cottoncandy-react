@@ -6,7 +6,7 @@ import { Row, StoryItem } from './utils.js';
 
 import SearchInput from '../lib/SearchInput';
 
-const stories = storiesOf('Core', module);
+const stories = storiesOf('Core', module); // eslint-disable-line no-undef
 
 stories
   .addDecorator(withKnobs)
