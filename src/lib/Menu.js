@@ -32,7 +32,7 @@ const NavItem = styled.li`
 const SubbedNavItem = NavItem.extend`
   padding-right: 24px;
   white-space: nowrap;
-  
+
   ::before {
     content: ' ';
     height: 6px;
