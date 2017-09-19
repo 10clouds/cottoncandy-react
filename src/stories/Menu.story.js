@@ -16,20 +16,20 @@ stories
         <StoryItem>
           <Menu links={[
             {
-              link: "http://10clouds.com/",
-              name: "Item 1"
+              link: 'http://10clouds.com/',
+              name: 'Item 1',
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 2"
+              link: 'http://10clouds.com/',
+              name: 'Item 2',
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 3"
+              link: 'http://10clouds.com/',
+              name: 'Item 3',
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 4"
+              link: 'http://10clouds.com/',
+              name: 'Item 4',
             }
           ]}/>
         </StoryItem>
@@ -38,34 +38,34 @@ stories
         <StoryItem>
           <Menu links={[
             {
-              link: "http://10clouds.com/",
-              name: "Item 1"
+              link: 'http://10clouds.com/',
+              name: 'Item 1'
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 2"
+              link: 'http://10clouds.com/',
+              name: 'Item 2'
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 3",
+              link: 'http://10clouds.com/',
+              name: 'Item 3',
               submenu: [
                 {
-                  link: "http://10clouds.com/",
-                  name: "Subitem 1"
+                  link: 'http://10clouds.com/',
+                  name: 'Subitem 1',
                 },
                 {
-                  link: "http://10clouds.com/",
-                  name: "Subitem 2"
+                  link: 'http://10clouds.com/',
+                  name: 'Subitem 2',
                 },
                 {
-                  link: "http://10clouds.com/",
-                  name: "Subitem 3"
+                  link: 'http://10clouds.com/',
+                  name: 'Subitem 3',
                 }
               ]
             },
             {
-              link: "http://10clouds.com/",
-              name: "Item 4"
+              link: 'http://10clouds.com/',
+              name: 'Item 4',
             }
           ]}/>
         </StoryItem>

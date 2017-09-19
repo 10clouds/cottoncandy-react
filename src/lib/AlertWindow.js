@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ModalWindow from "./ModalWindow";
-import Button from "./Button";
+import ModalWindow from './ModalWindow';
+import Button from './Button';
 
 const InfoText = styled.div`
   text-align: center;
@@ -12,7 +12,7 @@ const InfoText = styled.div`
 const ButtonRow = styled.div`
   text-align: center;
   margin-top: 32px;
-  
+
   button {
     margin: 0 16px;
   }

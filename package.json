@@ -14,7 +14,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "lint": "stylelint 'src/lib/**.js' && eslint 'src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -40,8 +41,15 @@
     "@storybook/addon-knobs": "^3.1.9",
     "@storybook/react": "^3.1.9",
     "@storybook/storybook-deployer": "^2.0.0",
+    "babel-eslint": "7",
+    "eslint": "3.x",
+    "eslint-plugin-react": "^7.3.0",
     "prop-types": "^15.5.10",
     "react-scripts": "^1.0.10",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^0.4.0",
     "why-did-you-update": "0.0.8"
   }
 }

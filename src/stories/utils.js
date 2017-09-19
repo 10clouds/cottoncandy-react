@@ -26,4 +26,4 @@ export const Row = (props) => (
       { props.children }
     </div>
   </div>
-)
+);

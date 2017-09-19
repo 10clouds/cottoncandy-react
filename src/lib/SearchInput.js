@@ -16,12 +16,12 @@ const StyledInput = styled.input`
 
   :focus {
     outline: 0;
-    
+
     & + button + div {
       display: block;
     }
   }
-  
+
   ::placeholder {
     color: ${palette.SECONDARY.dark};
   }
@@ -39,14 +39,15 @@ const StyledButton = styled.button`
   color: ${palette.TYPOGRAPHY.main};
   background: ${style.BACKGROUND.main};
   cursor: pointer;
-  
+
   :focus {
     outline: 0;
+
     > svg {
-      filter: drop-shadow( 0 0 2pt ${palette.PRIMARY.light} );
+      filter: drop-shadow(0 0 2pt ${palette.PRIMARY.light});
     }
   }
-  
+
   > svg {
     margin-top: 4px;
   }
@@ -76,8 +77,9 @@ const ExpandableStyledInput = styled.input`
   transition-property: width, background-position;
   font-size: 13px;
   cursor: ${(p) => p.expanded ? 'auto' : 'pointer'};
-  
-  &:focus, &:not(:placeholder-shown) {
+
+  &:focus,
+  &:not(:placeholder-shown) {
     width: 255px;
     cursor: auto;
 
@@ -85,16 +87,16 @@ const ExpandableStyledInput = styled.input`
       opacity: 1;
     }
   }
-  
+
   &:focus {
     outline: 0;
     box-shadow: ${style.SHADOW.outline};
   }
-  
+
   &:not(:focus):placeholder-shown + button {
     pointer-events: none;
   }
-  
+
   ::placeholder {
     color: ${palette.SECONDARY.dark};
     transition: ${style.TRANSITION.main};

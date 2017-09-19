@@ -20,7 +20,7 @@ const StyledToogle = styled.div`
       + label {
         opacity: 1;
 
-        &:before {
+        &::before {
           content: '✓';
           opacity: 1;
         }
@@ -33,9 +33,9 @@ const StyledToogle = styled.div`
       }
 
       + label {
-        opacity: .4;
+        opacity: 0.4;
 
-        &:after {
+        &::after {
           content: '×';
           opacity: 1;
         }
@@ -53,28 +53,28 @@ const StyledToogle = styled.div`
     position: relative;
     border: ${p => p.theme === 'primary' ? `solid 1px ${palette.PRIMARY.base}` : 'none'};
     border-radius: 18px;
-    transition: opacity .2s ease-out;
+    transition: opacity 0.2s ease-out;
     box-shadow: ${p => p.theme === 'primary' ? 'none' : style.SHADOW.dark};
     background-color: ${palette.GRAY.white};
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       color: ${palette.PRIMARY.base};
       position: absolute;
       transition: opacity 2s ease-out;
       opacity: 0;
     }
 
-    &:before {
+    &::before {
       left: 8px;
       top: 6px;
-      
+
       @supports (-ms-ime-align:auto) {
         top: 4px;
       }
     }
 
-    &:after {
+    &::after {
       right: 8px;
       top: 6px;
     }
@@ -87,7 +87,7 @@ const StyledToogle = styled.div`
     border-radius: 50%;
     background-color: ${palette.PRIMARY.base};
     margin-left: 6px;
-    transition: transform .2s ease-out;
+    transition: transform 0.2s ease-out;
   }
 `;
 

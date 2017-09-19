@@ -6,8 +6,7 @@ import { palette, style } from '../constants';
 import { noop } from './utils';
 
 const StyledWrapper = styled.div`
-  background-color: ${palette.GRAY.white};
-  background: white;
+  background: ${palette.GRAY.white};
   border-radius: 2px;
   border: ${p => p.focused ? `solid 1px ${palette.PRIMARY.base}` : p.valid ? `solid 1px ${palette.SECONDARY.base}` : `solid 1px ${palette.RED.base}`};
   color: ${palette.GRAY.black};
@@ -24,7 +23,7 @@ const StyledWrapper = styled.div`
   position: relative;
   width: 100%;
 
-  &:after {
+  &::after {
     border-color: ${p => p.active ? `${palette.GRAY.black} transparent` : `transparent ${palette.GRAY.black}`};
     border-style: solid;
     border-width: ${p => p.active ? '6px 6px 0 6px ' : '6px 0 6px 6px'};
@@ -52,7 +51,6 @@ const StyledButton = styled.button`
 `;
 
 const StyledDropdown = styled.ul`
-  background-color: ${style.BACKGROUND.main};
   background: ${style.BACKGROUND.main};
   border-radius: 5px;
   box-shadow: 0 0 ${p => p.shadowLevel * 8}px 0 ${palette.SECONDARY.base};
@@ -76,7 +74,6 @@ const OptionButton = styled.button`
   color: ${palette.GRAY.black};
   cursor: pointer;
   display: block;
-  display: block;
   font-size: 20px;
   outline: none;
   padding: 10px 20px;
@@ -84,7 +81,8 @@ const OptionButton = styled.button`
   text-decoration: none;
   width: 100%;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: ${palette.SECONDARY.light};
     outline: none;
   }
@@ -134,11 +132,11 @@ class Dropdown extends PureComponent {
   };
 
   hide = (e) => {
-    this.toggleActive(false)
+    this.toggleActive(false);
   };
 
   show = (e) => {
-    this.toggleActive(true)
+    this.toggleActive(true);
   };
 
   toggleActive = (active) => {

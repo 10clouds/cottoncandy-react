@@ -22,7 +22,7 @@ const StyledButton = styled.button`
     p.size === 'medium' ? '50px'
     : '70px'
   };
-  
+
   :focus {
     outline: 0;
     box-shadow: ${style.SHADOW.outline};
