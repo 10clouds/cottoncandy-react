@@ -5,7 +5,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import StepProgress from '../lib/StepProgress';
 import { Row, StoryItem } from './utils.js';
 
-const stories = storiesOf('Core', module); // eslint-disable-line no-undef
+const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)

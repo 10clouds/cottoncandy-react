@@ -6,7 +6,7 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import Button from '../lib/Button';
 import { Row, StoryItem } from './utils.js';
 
-const stories = storiesOf('Core', module); // eslint-disable-line no-undef
+const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)

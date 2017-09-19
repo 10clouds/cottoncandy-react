@@ -5,7 +5,7 @@ import { withKnobs, number } from '@storybook/addon-knobs';
 import RangeSlider from '../lib/RangeSlider';
 import { Row, StoryItem } from './utils.js';
 
-const stories = storiesOf('Core', module); // eslint-disable-line no-undef
+const stories = storiesOf('Core', module);
 
 stories
   .addDecorator(withKnobs)
