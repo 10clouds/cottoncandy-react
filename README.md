@@ -26,6 +26,17 @@ To run Storybook:
 npm run storybook
 ```
 
+## Developing using Docker
+
+Start docker container:
+
+```sh
+docker-compose up
+```
+
+Navigate your browser to: http://localhost:9009/
+and enjoy developing new components in ```./src``` folder.
+
 ## Deploying Storybook to GitHub Pages
 
 ```sh
