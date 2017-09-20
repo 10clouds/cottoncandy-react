@@ -107,7 +107,7 @@ const ExpandableStyledInput = styled.input`
 
 const SearchIcon = () => (
   <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <g fill="${encodeURI(palette.TYPOGRAPHY.main)}">
+    <g fill={encodeURI(palette.TYPOGRAPHY.main)}>
       <path d="M15.5608163,13.5026804 L11.3436735,9.24206186 C11.3436735,9.24206186 11.3436735,9.24206186
         11.2440816,9.24206186 C11.7453061,8.22762887 12.0473469,7.21319588 12.0473469,6.09814433
         C12.0473469,2.75134021 9.33714286,0.0131958763 6.0244898,0.0131958763 C2.71183673,0.0131958763
